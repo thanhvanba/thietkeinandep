@@ -1,0 +1,10 @@
+.option-style {
+    color: white;
+}
+
+.option-style:hover {
+    color: rgba(17,17,17,.85);
+}
+.active {
+    color: rgba(17,17,17,.85);
+}

@@ -1,0 +1,32 @@
+.bg3 {
+    background-position: 0% 10%;
+}
+.red-line {
+    background: #cecece;
+    z-index: -1;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 15px;
+}
+.white-line {
+    background: #ffff;
+    z-index: -1;
+    top: 0px;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 15px;
+}
+.list-bullet {
+    float: left;
+    margin-right: 20px;
+    background: rgb(68, 96, 132);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 100px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
