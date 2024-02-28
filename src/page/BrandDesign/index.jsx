@@ -7,13 +7,15 @@ import logoKH from "../../assets/img/LOGO-KHACH-HANG.png"
 
 import Banner from '../../components/Banner';
 import './brandDesign.css'
+import Banner2 from '../../components/Banner2';
 const BrandDesign = () => {
-    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn ghi dấu vào trái tim khách hàng.'];
+    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
             <Header />
-            {/* Banner */}
-            <Banner customPT="50%" customClassName="bg2" customBg="brandDesign" customWidth="44%" customTop="34%" titleArr={titleArray} />
+           
+            {/* <Banner customPT="50%" customClassName="bg2" customBg="brandDesign" customWidth="44%" customTop="34%" titleArr={titleArray} /> */}
+            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 15%"/>
 
             <section className='flex'>
                 <div className='relative w-full'>

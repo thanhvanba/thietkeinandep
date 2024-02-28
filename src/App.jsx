@@ -9,12 +9,12 @@ import DetailPrinting from "./page/DetailPrinting"
 export default function App() {
   return (
     <div>
-      {/* <Home /> */}
+      <Home />
       {/* <BrandDesign /> */}
       {/* <DetailBrandDesign /> */}
       {/* <PackageDesign /> */}
       {/* <DetailPackageDesign /> */}
-      <Printing />
+      {/* <Printing /> */}
       {/* <DetailPrinting/> */}
     </div>
   )
