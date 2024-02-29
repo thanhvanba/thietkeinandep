@@ -5,6 +5,7 @@ import Printing from "./page/Printing"
 import DetailBrandDesign from "./page/DetailBrandDesign"
 import DetailPackageDesign from "./page/DetailPackageDesign"
 import DetailPrinting from "./page/DetailPrinting"
+import DetailProject from "./page/DetailProject"
 
 export default function App() {
   return (
@@ -14,8 +15,9 @@ export default function App() {
       {/* <DetailBrandDesign /> */}
       {/* <PackageDesign /> */}
       {/* <DetailPackageDesign /> */}
-      <Printing />
+      {/* <Printing /> */}
       {/* <DetailPrinting/> */}
+      <DetailProject />
     </div>
   )
 }
