@@ -15,6 +15,7 @@ const MainRouter = () => {
         <div>
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/du-an" element={<Home />} />
                 <Route path="/thiet-ke-thuong-hieu" element={<BrandDesign />} />
                 <Route path="/thiet-ke-bao-bi" element={<PackageDesign />} />
                 <Route path="/in-an-san-xuat" element={<Printing />} />

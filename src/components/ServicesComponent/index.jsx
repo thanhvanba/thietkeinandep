@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServicesComponent = ({ colBg, name, colName, nameE, colNameE, text1, text2, colText }) => {
     return (
-        <div className='px-[15px] pb-[30px]'>
+        <div className=''>
             <div style={{ backgroundColor: colBg, padding: '20px' }}>
                 <h6
                     style={{ color: colName }}

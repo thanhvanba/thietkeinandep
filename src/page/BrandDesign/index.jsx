@@ -20,11 +20,10 @@ const BrandDesign = () => {
 
                         <div className={`bg2 absolute top-0 left-0 w-full h-full bg-brandDesign bg-cover`}></div>
 
-
                         <div className='relative h-full'>
                             <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
                                 <div className='absolute top-0 bottom-0 right-0 left-0 h-full w-full' />
-                                <div className={`absolute w-[44%] top-[34%] left-[0%]`}>
+                                <div className={`absolute hidden sm:block w-[44%] top-[34%] left-[0%]`}>
                                     <p className=''>
                                         {titleArray.map((text, index) => (
                                             <a key={index} className='font-corinthia text-[25pt] text-black font-bold'>
@@ -132,8 +131,8 @@ const BrandDesign = () => {
                         <p className='font-alexandria uppercase text-[20pt] text-[#334862] text-center'>Các gói dịch vụ</p>
                         <br />
                     </div>
-                    <div className='max-w-[1080px] mx-auto flex'>
-                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesigncoban' className="w-1/3">
+                    <div className='max-w-[1080px] mx-auto flex flex-col sm:flex-row'>
+                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesigncoban' className='sm:w-1/3 px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#FFFFFF"
                                 name="Thiết kế thương hiệu cơ bản"
@@ -145,7 +144,7 @@ const BrandDesign = () => {
                                 colText="#777"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesignnangcao' className="w-1/3">
+                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesignnangcao' className='sm:w-1/3 px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#446084"
                                 name="Thiết kế thương hiệu nâng cao"
@@ -157,7 +156,7 @@ const BrandDesign = () => {
                                 colText="#FFF"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesigncaocap' className="w-1/3">
+                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesigncaocap' className='sm:w-1/3 px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#A29E9E"
                                 name="Thiết kế thương hiệu cao cấp"

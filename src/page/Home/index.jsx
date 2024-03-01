@@ -32,7 +32,7 @@ const Home = () => {
             <div className='relative h-full'>
               <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
                 <div className='absolute top-0 bottom-0 right-0 left-0 h-full w-full' />
-                <div className={`absolute w-[44%] top-[34%] left-[0%]`}>
+                <div className={`absolute hidden sm:block  w-[44%] top-[34%] left-[0%]`}>
                   <p className=''>
                     {titleArray.map((text, index) => (
                       <a key={index} className='font-corinthia text-[25pt] text-black font-bold'>
@@ -52,8 +52,8 @@ const Home = () => {
       {/* Dịch vụ */}
       <section className='flex bg-[#CECECE]'>
         <div className='relative w-full'>
-          <div className='max-w-[1080px] mx-auto flex'>
-            <Link to="./thiet-ke-thuong-hieu" className='w-1/3'>
+          <div className='max-w-[1080px] mx-auto flex flex-col sm:flex-row'>
+            <Link to="/thiet-ke-thuong-hieu" className='sm:w-1/3 px-[15px] pb-[30px]'>
               <ServicesComponent
                 colBg="#FFFFFF"
                 name="Thiết kế thương hiệu"
@@ -65,7 +65,7 @@ const Home = () => {
                 colText="#777"
               />
             </Link>
-            <Link to="./thiet-ke-bao-bi" className='w-1/3'>
+            <Link to="/thiet-ke-bao-bi" className='sm:w-1/3 px-[15px] pb-[30px]'>
               <ServicesComponent
                 colBg="#446084"
                 name="Thiết kế bao bì"
@@ -77,7 +77,7 @@ const Home = () => {
                 colText="#FFF"
               />
             </Link>
-            <Link to="./in-an-san-xuat" className='w-1/3'>
+            <Link to="/in-an-san-xuat" className='sm:w-1/3 px-[15px] pb-[30px]'>
               <ServicesComponent
                 colBg="#A29E9E"
                 name="Sản xuất - in ấn"
@@ -96,7 +96,7 @@ const Home = () => {
 
       {/* Dự án đã làm */}
       <section className='flex bg-[#CECECE]'>
-        <div className='relative w-full'>
+        <div id='du-an' className='relative w-full'>
           <div className=''>
             <div className='relative px-[15px] pb-[30px]'>
               <div className='w-1/2 m-auto'>
@@ -105,39 +105,49 @@ const Home = () => {
             </div>
           </div>
           <div className='max-w-[1065px] mx-auto '>
-            <div className='grid grid-cols-3 gap-5 pb-5'>
-              <Link to='/project-logo-vnwine'>
+            <div className='grid sm:grid-cols-3 pb-5'>
+              <Link to='/project-logo-vnwine' className='px-[10px] pb-[30px]'>
                 <ProjectComponent
                   title="Thiết kế Logo"
                   name="LOGO VN.WINE"
                   img={pro1}
                 />
               </Link>
-              <ProjectComponent
-                title="Thiết kế Logo"
-                name="GROUP"
-                img={pro2}
-              />
-              <ProjectComponent
-                title="Thiết kế bao bì"
-                name="BAMBOO"
-                img={pro3}
-              />
-              <ProjectComponent
-                title="Thiết kế Logo"
-                name="LOGO VN.WINE"
-                img={pro1}
-              />
-              <ProjectComponent
-                title="Thiết kế nhận dạng thương hiệu"
-                name="SONG VIÊN"
-                img={pro4}
-              />
-              <ProjectComponent
-                title="Thiết kế bao bì"
-                name="BAMBOO"
-                img={pro3}
-              />
+              <Link to='/project-logo-vnwine' className='px-[10px] pb-[30px]'>
+                <ProjectComponent
+                  title="Thiết kế Logo"
+                  name="GROUP"
+                  img={pro2}
+                />
+              </Link>
+              <Link to='/project-logo-vnwine' className='px-[10px] pb-[30px]'>
+                <ProjectComponent
+                  title="Thiết kế bao bì"
+                  name="BAMBOO"
+                  img={pro3}
+                />
+              </Link>
+              <Link to='/project-logo-vnwine' className='px-[10px] pb-[30px]'>
+                <ProjectComponent
+                  title="Thiết kế Logo"
+                  name="LOGO VN.WINE"
+                  img={pro1}
+                />
+              </Link>
+              <Link to='/project-logo-vnwine' className='px-[10px] pb-[30px]'>
+                <ProjectComponent
+                  title="Thiết kế nhận dạng thương hiệu"
+                  name="SONG VIÊN"
+                  img={pro4}
+                />
+              </Link>
+              <Link to='/project-logo-vnwine' className='px-[10px] pb-[30px]'>
+                <ProjectComponent
+                  title="Thiết kế bao bì"
+                  name="BAMBOO"
+                  img={pro3}
+                />
+              </Link>
             </div>
           </div>
         </div>

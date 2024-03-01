@@ -33,7 +33,7 @@ export default function DropDown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="./thiet-ke-thuong-hieu"
+                                    href="/thiet-ke-thuong-hieu"
                                     className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'
                                 >
                                     Thiết kế thương hiệu
@@ -45,7 +45,7 @@ export default function DropDown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="./thiet-ke-bao-bi"
+                                    href="/thiet-ke-bao-bi"
                                     className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'
                                 >
                                     Thiết kế bao bì
@@ -57,7 +57,7 @@ export default function DropDown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="./in-an-san-xuat"
+                                    href="/in-an-san-xuat"
                                     className='font-robotoSlab text-base text-[#666666D9]  block px-4 py-m'
                                 >
                                     In ấn sản xuất
