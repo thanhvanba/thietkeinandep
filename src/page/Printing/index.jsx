@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { HashLink } from 'react-router-hash-link';
+
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ServicesComponent from '../../components/ServicesComponent';
@@ -132,36 +134,42 @@ const Printing = () => {
                         <br />
                     </div>
                     <div className='max-w-[1080px] mx-auto flex'>
-                        <ServicesComponent
-                            colBg="#FFFFFF"
-                            name="SẢN XUẤT IN ẤN cơ bản"
-                            colName="#555"
-                            nameE="IN NHANH"
-                            colNameE="#334862"
-                            text1="In KTS, số lượng ít (danh thiếp, tem nhãn…)"
-                            text2="in dữ liệu biến đổi (mã vạch, QR code…)"
-                            colText="#777"
-                        />
-                        <ServicesComponent
-                            colBg="#446084"
-                            name="SẢN XUẤT IN ẤN nâng cao"
-                            colName="#FFFFFF"
-                            nameE="IN OFFSET"
-                            colNameE="#FFF"
-                            text1="In ấn bao bì, ấn phẩm số lượng lớn, chuẩn"
-                            text2="màu sắc, đa dạng chất liệu, quy cách"
-                            colText="#FFF"
-                        />
-                        <ServicesComponent
-                            colBg="#A29E9E"
-                            name="SẢN XUẤT IN ẤN cao cấp"
-                            colName="#fff"
-                            nameE="IN QUẢNG CÁO"
-                            colNameE="#334862"
-                            text1="In ấn phẩm quảng cáo, backdrop, Standee,"
-                            text2="đồng phục, POSM…"
-                            colText="#FFF"
-                        />
+                        <HashLink to='/bao-gia-in-an-san-xuat/#innhanhkts' className="w-1/3">
+                            <ServicesComponent
+                                colBg="#FFFFFF"
+                                name="SẢN XUẤT IN ẤN cơ bản"
+                                colName="#555"
+                                nameE="IN NHANH"
+                                colNameE="#334862"
+                                text1="In KTS, số lượng ít (danh thiếp, tem nhãn…)"
+                                text2="in dữ liệu biến đổi (mã vạch, QR code…)"
+                                colText="#777"
+                            />
+                        </HashLink>
+                        <HashLink to='/bao-gia-in-an-san-xuat/#offset' className="w-1/3">
+                            <ServicesComponent
+                                colBg="#446084"
+                                name="SẢN XUẤT IN ẤN nâng cao"
+                                colName="#FFFFFF"
+                                nameE="IN OFFSET"
+                                colNameE="#FFF"
+                                text1="In ấn bao bì, ấn phẩm số lượng lớn, chuẩn"
+                                text2="màu sắc, đa dạng chất liệu, quy cách"
+                                colText="#FFF"
+                            />
+                        </HashLink>
+                        <HashLink to='/bao-gia-in-an-san-xuat/#posm' className="w-1/3">
+                            <ServicesComponent
+                                colBg="#A29E9E"
+                                name="SẢN XUẤT IN ẤN cao cấp"
+                                colName="#fff"
+                                nameE="IN QUẢNG CÁO"
+                                colNameE="#334862"
+                                text1="In ấn phẩm quảng cáo, backdrop, Standee,"
+                                text2="đồng phục, POSM…"
+                                colText="#FFF"
+                            />
+                        </HashLink>
                     </div>
                 </div>
             </section>

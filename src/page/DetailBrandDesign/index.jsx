@@ -18,10 +18,10 @@ const DetailBrandDesign = () => {
             <div className='h-[full] w-full relative'>
                 <div className={`pt-[50%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
-           
+
                         <div className={`bg2 absolute top-0 left-0 w-full h-full bg-brandDesign bg-cover`}></div>
 
-  
+
                         <div className='relative h-full'>
                             <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
                                 <div className='absolute top-0 bottom-0 right-0 left-0 h-full w-full' />
@@ -45,17 +45,17 @@ const DetailBrandDesign = () => {
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='logodesigncoban' className='px-[15px] pb-[30px]'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={logoBasic} alt="" />
                             </div>
                         </div>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='logodesignnangcao' className='px-[15px] pb-[30px]'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={logoAdvanced} alt="" />
                             </div>
                         </div>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='logodesigncaocap' className='px-[15px] pb-[30px]'>
                             <div className=''>
                                 <img className='w-full h-full object-cover' src={logoPremium} alt="" />
                             </div>

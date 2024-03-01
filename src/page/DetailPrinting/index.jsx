@@ -44,17 +44,17 @@ const DetailPrinting = () => {
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='innhanhkts' className='px-[15px] pb-[30px]'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={printBasic} alt="" />
                             </div>
                         </div>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='offset' className='px-[15px] pb-[30px]'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={printAdvanced} alt="" />
                             </div>
                         </div>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='posm' className='px-[15px] pb-[30px]'>
                             <div className=''>
                                 <img className='w-full h-full object-cover' src={printPremium} alt="" />
                             </div>

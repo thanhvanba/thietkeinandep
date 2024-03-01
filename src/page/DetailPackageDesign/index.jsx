@@ -44,17 +44,17 @@ const DetailPackageDesign = () => {
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='packingdesigncoban' className='px-[15px] pb-[30px]'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={packageBasic} alt="" />
                             </div>
                         </div>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='packingdesignnangcao' className='px-[15px] pb-[30px]'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={packageAdvanced} alt="" />
                             </div>
                         </div>
-                        <div className='px-[15px] pb-[30px]'>
+                        <div id='packingdesigncaocap' className='px-[15px] pb-[30px]'>
                             <div className=''>
                                 <img className='w-full h-full object-cover' src={packagePremium} alt="" />
                             </div>

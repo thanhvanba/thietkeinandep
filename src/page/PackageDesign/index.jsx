@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { HashLink } from 'react-router-hash-link';
+
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ServicesComponent from '../../components/ServicesComponent';
@@ -16,10 +18,10 @@ const PackageDesign = () => {
             <div className='h-[full] w-full relative'>
                 <div className={`pt-[56.25%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
-           
+
                         <div className={`bg3 absolute top-0 left-0 w-full h-full bg-packageDesign bg-cover`}></div>
 
-  
+
                         <div className='relative h-full'>
                             <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
                                 <div className='absolute top-0 bottom-0 right-0 left-0 h-full w-full' />
@@ -132,36 +134,42 @@ const PackageDesign = () => {
                         <br />
                     </div>
                     <div className='max-w-[1080px] mx-auto flex'>
-                        <ServicesComponent
-                            colBg="#FFFFFF"
-                            name="THIẾT KẾ BAO BÌ cơ bản"
-                            colName="#555"
-                            nameE="Basic"
-                            colNameE="#334862"
-                            text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-                            text2="Tối ưu quy trình đóng gói."
-                            colText="#777"
-                        />
-                        <ServicesComponent
-                            colBg="#446084"
-                            name="THIẾT KẾ BAO BÌ nâng cao"
-                            colName="#FFFFFF"
-                            nameE="advanced"
-                            colNameE="#FFF"
-                            text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-                            text2="Tối ưu quy trình đóng gói."
-                            colText="#FFF"
-                        />
-                        <ServicesComponent
-                            colBg="#A29E9E"
-                            name="THIẾT KẾ BAO BÌ cao cấp"
-                            colName="#fff"
-                            nameE="premium"
-                            colNameE="#334862"
-                            text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-                            text2="Tối ưu quy trình đóng gói."
-                            colText="#FFF"
-                        />
+                        <HashLink to='/bao-gia-thiet-ke-bao-bi/#packingdesigncoban' className="w-1/3">
+                            <ServicesComponent
+                                colBg="#FFFFFF"
+                                name="THIẾT KẾ BAO BÌ cơ bản"
+                                colName="#555"
+                                nameE="Basic"
+                                colNameE="#334862"
+                                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
+                                text2="Tối ưu quy trình đóng gói."
+                                colText="#777"
+                            />
+                        </HashLink>
+                        <HashLink to='/bao-gia-thiet-ke-bao-bi/#packingdesignnangcao' className="w-1/3">
+                            <ServicesComponent
+                                colBg="#446084"
+                                name="THIẾT KẾ BAO BÌ nâng cao"
+                                colName="#FFFFFF"
+                                nameE="advanced"
+                                colNameE="#FFF"
+                                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
+                                text2="Tối ưu quy trình đóng gói."
+                                colText="#FFF"
+                            />
+                        </HashLink>
+                        <HashLink to='/bao-gia-thiet-ke-bao-bi/#packingdesigncaocap' className="w-1/3">
+                            <ServicesComponent
+                                colBg="#A29E9E"
+                                name="THIẾT KẾ BAO BÌ cao cấp"
+                                colName="#fff"
+                                nameE="premium"
+                                colNameE="#334862"
+                                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
+                                text2="Tối ưu quy trình đóng gói."
+                                colText="#FFF"
+                            />
+                        </HashLink>
                     </div>
                 </div>
             </section>

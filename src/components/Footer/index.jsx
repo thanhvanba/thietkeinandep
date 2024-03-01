@@ -11,15 +11,15 @@ const Footer = () => {
                         <div className='w-1/3 px-[30px] pb-[30px]'>
                             <div className='text-[#f1f1f1]'>
                                 <div className='flex-col'>
-                                    <a href="" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="./thiet-ke-thuong-hieu" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Thiết kế thương hiệu</span>
                                     </a>
-                                    <a href="" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="./thiet-ke-bao-bi" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Thiết kế bao bì</span>
                                     </a>
-                                    <a href="" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="./in-an-san-xuat" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>In ấn sản xuất</span>
                                     </a>
@@ -29,15 +29,15 @@ const Footer = () => {
                         <div className='w-1/3 px-[30px] pb-[30px]'>
                             <div className='text-[#f1f1f1]'>
                                 <div className='flex-col'>
-                                    <a href="" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="./" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Về chúng tôi</span>
                                     </a>
-                                    <a href="" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="./tin-tuc" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Tin tức</span>
                                     </a>
-                                    <a href="" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="./" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Các dự án đã thực hiện</span>
                                     </a>
@@ -65,7 +65,7 @@ const Footer = () => {
                         <div className='text-[12.24px]'>
                             <ul className='my-[5px] pb-[5px] border-b-[0.8px] border-[#FFFFFF14] uppercase opacity-80'>
                                 <li className='mr-[5px] inline-block'>
-                                    <a href="#">Tư vấn miễn phí</a>
+                                    <a href="#" onClick={() => window.open("https://zalo.me/0906260488", '_blank')}>Tư vấn miễn phí</a>
                                 </li>
                                 <li className='ml-[5px] inline-block'>
                                     <a href="#">Porfolio</a>

@@ -14,6 +14,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer'
 import Banner from '../../components/Banner';
 import './home.css'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const titleArray = ['Chúng tôi cùng bạn tạo nên kết nối', 'từ thương hiệu đến khách hàng'];
@@ -52,38 +53,43 @@ const Home = () => {
       <section className='flex bg-[#CECECE]'>
         <div className='relative w-full'>
           <div className='max-w-[1080px] mx-auto flex'>
-            <ServicesComponent
-              colBg="#FFFFFF"
-              name="Thiết kế thương hiệu"
-              colName="#555"
-              nameE="Brand design"
-              colNameE="#334862"
-              text1="Thiết kế LOGO, bộ nhận diện thương hiệu."
-              text2="Catalogue, hồ sơ năng lực."
-              colText="#777"
-            />
-            <ServicesComponent
-              colBg="#446084"
-              name="Thiết kế bao bì"
-              colName="#FFFFFF"
-              nameE="PACKING DESIGN"
-              colNameE="#FFF"
-              text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-              text2="Tối ưu quy trình đóng gói."
-              colText="#FFF"
-            />
-            <ServicesComponent
-              colBg="#A29E9E"
-              name="Sản xuất - in ấn"
-              colName="#fff"
-              nameE="Printing"
-              colNameE="#334862"
-              text1="Sản xuất in ấn bao bì: hộp, túi, tem nhãn"
-              text2="In ấn Namecard, Catalogue, Poster,…"
-              colText="#FFF"
-            />
+            <Link to="./thiet-ke-thuong-hieu" className='w-1/3'>
+              <ServicesComponent
+                colBg="#FFFFFF"
+                name="Thiết kế thương hiệu"
+                colName="#555"
+                nameE="Brand design"
+                colNameE="#334862"
+                text1="Thiết kế LOGO, bộ nhận diện thương hiệu."
+                text2="Catalogue, hồ sơ năng lực."
+                colText="#777"
+              />
+            </Link>
+            <Link to="./thiet-ke-bao-bi" className='w-1/3'>
+              <ServicesComponent
+                colBg="#446084"
+                name="Thiết kế bao bì"
+                colName="#FFFFFF"
+                nameE="PACKING DESIGN"
+                colNameE="#FFF"
+                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
+                text2="Tối ưu quy trình đóng gói."
+                colText="#FFF"
+              />
+            </Link>
+            <Link to="./in-an-san-xuat" className='w-1/3'>
+              <ServicesComponent
+                colBg="#A29E9E"
+                name="Sản xuất - in ấn"
+                colName="#fff"
+                nameE="Printing"
+                colNameE="#334862"
+                text1="Sản xuất in ấn bao bì: hộp, túi, tem nhãn"
+                text2="In ấn Namecard, Catalogue, Poster,…"
+                colText="#FFF"
+              />
+            </Link>
           </div>
-
         </div>
 
       </section>
@@ -100,11 +106,13 @@ const Home = () => {
           </div>
           <div className='max-w-[1065px] mx-auto '>
             <div className='grid grid-cols-3 gap-5 pb-5'>
-              <ProjectComponent
-                title="Thiết kế Logo"
-                name="LOGO VN.WINE"
-                img={pro1}
-              />
+              <Link to='/project-logo-vnwine'>
+                <ProjectComponent
+                  title="Thiết kế Logo"
+                  name="LOGO VN.WINE"
+                  img={pro1}
+                />
+              </Link>
               <ProjectComponent
                 title="Thiết kế Logo"
                 name="GROUP"
@@ -135,7 +143,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* flex */}
+      {/* logoKH */}
       <section className='flex'>
         <div className='relative w-full'>
           <div className='max-w-[1080px] mx-auto'>
@@ -149,7 +157,9 @@ const Home = () => {
                 </div>
                 <a
                   className='inline-block border-[#0000000D] border-[0.8px] bg-[#446084] hover:bg-[#334862] text-white px-[1.2em] leading-[2.4em]'
-                  href="">
+                  href="#"
+                  onClick={() => window.open("https://zalo.me/0906260488", '_blank')}
+                >
                   <span className='inline-block'>LIÊN HỆ ĐỂ ĐƯỢC TƯ VẤN!</span>
                 </a>
               </div>

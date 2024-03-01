@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServicesComponent = ({ colBg, name, colName, nameE, colNameE, text1, text2, colText }) => {
     return (
-        <div className='w-1/3 px-[15px] pb-[30px]'>
+        <div className='px-[15px] pb-[30px]'>
             <div style={{ backgroundColor: colBg, padding: '20px' }}>
                 <h6
                     style={{ color: colName }}
@@ -10,12 +10,11 @@ const ServicesComponent = ({ colBg, name, colName, nameE, colNameE, text1, text2
                     {name}
                 </h6>
                 <h1 className='font-playfairDisplay font-bold text-[1.7em] mb-[0.5em] uppercase'>
-                    <a
+                    <p
                         style={{ color: colNameE }}
-                        href=""
                     >
                         {nameE}
-                    </a>
+                    </p>
                 </h1>
                 <p
                     style={{ color: colText }}

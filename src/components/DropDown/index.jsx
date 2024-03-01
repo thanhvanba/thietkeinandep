@@ -9,7 +9,7 @@ export default function DropDown() {
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
-                <Menu.Button className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">
+                <Menu.Button className={`flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2`}>
                     Dịch vụ
                     <ChevronDownIcon
                         className='h-4 w-4'
@@ -33,7 +33,7 @@ export default function DropDown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="./thiet-ke-thuong-hieu"
                                     className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'
                                 >
                                     Thiết kế thương hiệu
@@ -45,7 +45,7 @@ export default function DropDown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="./thiet-ke-bao-bi"
                                     className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'
                                 >
                                     Thiết kế bao bì
@@ -57,7 +57,7 @@ export default function DropDown() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="./in-an-san-xuat"
                                     className='font-robotoSlab text-base text-[#666666D9]  block px-4 py-m'
                                 >
                                     In ấn sản xuất
