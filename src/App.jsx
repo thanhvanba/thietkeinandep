@@ -1,4 +1,4 @@
-import MainRouter from "./page/routes"
+import MainRouter from "./routes"
 import ResponsiveMenu from "./components/ResponsiveMenu"
 
 export default function App() {
