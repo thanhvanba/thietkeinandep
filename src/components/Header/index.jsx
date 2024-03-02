@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react'
 import { useSpring, animated } from 'react-spring';
 
 import logo from "../../assets/img/LOGO.png"
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, Bars3Icon } from '@heroicons/react/20/solid'
 
+import ResponsiveMenu from '../ResponsiveMenu'
 import DropDown from '../DropDown'
 import "./header.css"
 
@@ -69,7 +70,8 @@ const Header = () => {
                                 <img className="h-full w-auto" src={logo} alt="" />
                             </a>
                         </div>
-                        <div className=''>
+                        <ResponsiveMenu />
+                        <div className='hidden md:block'>
                             <ul className='flex'>
                                 <li className='mx-2 relative'>
                                     <a href='/' className={`${currentTab === "0" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
@@ -109,7 +111,8 @@ const Header = () => {
                                 <img className="h-full w-auto" src={logo} alt="" />
                             </a>
                         </div>
-                        <div className=''>
+                        <ResponsiveMenu />
+                        <div className='hidden md:block'>
                             <ul className='flex'>
                                 <li className='mx-2 relative'>
                                     <a href='/' className={`${currentTab === "0" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
@@ -138,7 +141,7 @@ const Header = () => {
                             </ul>
                         </div>
                     </div>
-                </div >
+                </div>
             </animated.header >
         </>
     )

@@ -1,0 +1,130 @@
+import React, { useState } from 'react';
+import { Button, Drawer } from 'antd';
+import { Bars3Icon, XMarkIcon, ChevronUpDownIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
+import { FacebookIcon, Instagram, Twitter, Mail } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link'
+
+import logo from "../../assets/img/LOGO.png"
+
+const App = () => {
+    const [open, setOpen] = useState(false);
+    const [show, setShow] = useState(false);
+    const [showButton, setShowButton] = useState(false);
+
+    const showService = () => {
+        setShow(!show)
+    }
+    const showDrawer = () => {
+        setOpen(true);
+        setShowButton(true)
+    };
+    const onClose = () => {
+        setOpen(false);
+        setShowButton(false)
+    };
+    return (
+        <>
+            <Button
+                className='border-[0px] p-0 shadow-none'
+                type={'default'}
+                onClick={showDrawer}
+                style={{ background: 'none', borderColor: 'transparent' }}
+            >
+                <div className={`${showButton ? 'hidden' : ''} md:hidden h-full`}>
+                    <div className='relative'>
+                        <Bars3Icon className='h-6 w-6' />
+                    </div>
+                </div>
+
+            </Button>
+            <div className={`${showButton ? '' : 'hidden'} md:hidden absolute top-2 right-2`}>
+                <div className='text-white font-extrabold'>
+                    <XMarkIcon className='h-8 w-8' />
+                </div>
+            </div>
+            <Drawer
+                placement={'left'}
+                closable={false}
+                onClose={onClose}
+                open={open}
+                key={'left'}
+                width={280}
+                bodyStyle={{ padding: 0 }}
+                style={{ background: '#FFFFFFF2' }}
+            >
+                <ul className="relative text-center font-lato text-[16px] text-[#666] pt-5">
+                    <li className='flex items-center justify-center'>
+                        <a href='/' className='h-32 w-32 '>
+                            <span className="sr-only">Your Company</span>
+                            <img className="h-full w-auto" src={logo} alt="" />
+                        </a>
+                    </li>
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
+                        <div className='pl-5 py-[15px] flex '>
+                            <a href="/">Trang chủ</a>
+                        </div>
+                    </li>
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px]">
+                        <div className='flex flex-row font-extrabold uppercase text-black items-center'>
+                            <div className='pl-5 py-[15px] flex flex-grow'>
+                                <a href="#service">Dịch vụ</a>
+                            </div>
+                            <div className='w-11 h-10 relative'>
+                                <ChevronUpDownIcon onClick={showService} className='w-6 h-6 absolute top-1 left-2 font-normal' />
+                            </div>
+                        </div>
+
+                        <ul className={`${show ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
+                            <li className="pl-2">
+                                <a href="/thiet-ke-thuong-hieu" className='pl-5 py-[5px] flex'>Thiết kế thương hiệu</a>
+                            </li>
+                            <li className="pl-2">
+                                <a href="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</a>
+                            </li>
+                            <li className="pl-2">
+                                <a href="/in-an-san-xuat" className='pl-5 py-[5px] flex'>In ấn sản xuất</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
+                        <div className='pl-5 py-[15px]  flex'>
+                            <a href="/tin-tuc">Tin tức</a>
+                        </div>
+                    </li>
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
+                        <div className='pl-5 py-[15px] flex'>
+                            <HashLink to='/du-an/#du-an'>
+                                <a href="">Dự án</a>
+                            </HashLink>
+                        </div>
+                    </li>
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
+                        <div className='pl-5 py-[15px] flex'>
+                            <a href="https://zalo.me/0906260488">Liên hệ</a>
+                        </div>
+                    </li>
+                    WooCommerce not Found
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
+                        <div className='pl-5 py-[15px]  flex'>
+                            <a href="#header-newsletter-signup" className="tooltip" title="Sign up for Newsletter">
+                                <i className="icon-envelop"></i>
+                                <span className="header-newsletter-title flex items-center"><EnvelopeIcon className='h-5 w-5 mr-1' />Newsletter</span>
+                            </a>
+                        </div>
+
+                    </li>
+                    <li className="border-t-[0.8px] w-full">
+                        <div className='pl-5 py-[15px]  flex'>
+                            <FacebookIcon className='h-4 w-4 mx-1' />
+                            <Instagram className='h-4 w-4 mx-1' />
+                            <Twitter className='h-4 w-4 mx-1' />
+                            <Mail className='h-4 w-4 mx-1' />
+                        </div>
+                    </li>
+                </ul>
+            </Drawer>
+        </>
+    );
+};
+export default App;
