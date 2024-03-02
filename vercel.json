@@ -2,15 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "./src/main.jsx",
-      "use": "@vercel/node"
+      "src": "src/main.jsx",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
-    {
-      "src": "/src/(.*)",
-      "dest": "/src/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "/"
