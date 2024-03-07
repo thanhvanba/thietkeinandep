@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 import { useEffect, useState } from 'react'
 import { useSpring, animated } from 'react-spring';
@@ -24,7 +24,7 @@ const Header = () => {
                 break;
             case "/thiet-ke-thuong-hieu":
             case '/thiet-ke-bao-bi':
-            case "/in-an-san-xuat":
+            case "/san-xuat-in-an":
                 setCurrentTab("1")
                 break;
             case "/tin-tuc":
@@ -65,34 +65,35 @@ const Header = () => {
                 <div className='relative w-full h-full'>
                     <div className='max-w-[1080px] px-[15px] mx-auto h-full flex justify-between items-center'>
                         <div className='h-full'>
-                            <a href='/'>
+                            <Link to='/'>
                                 <span className="sr-only">Your Company</span>
                                 <img className="h-full w-auto" src={logo} alt="" />
-                            </a>
+                            </Link>
                         </div>
                         <ResponsiveMenu />
                         <div className='hidden md:block'>
                             <ul className='flex'>
                                 <li className='mx-2 relative'>
-                                    <a href='/' className={`${currentTab === "0" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                    <Link to='/' className={`${currentTab === "0" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                         TRANG CHỦ
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className={`${currentTab === "1" ? 'active' : ''} mx-2 relative  option-style`}>
                                     <DropDown />
                                 </li>
                                 <li className='mx-2 relative'>
-                                    <a href='/tin-tuc' className={`${currentTab === "2" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                    <Link to='/tin-tuc' className={`${currentTab === "2" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                         TIN TỨC
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='mx-2 relative'>
                                     <HashLink to='/du-an/#du-an' className="w-1/3">
-                                        <a href='' className={`${currentTab === "3" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                        <p className={`${currentTab === "3" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                             DỰ ÁN
-                                        </a>
+                                        </p>
                                     </HashLink>
-                                </li><li className='mx-2 relative'>
+                                </li>
+                                <li className='mx-2 relative'>
                                     <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')} className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">
                                         LIÊN HỆ
                                     </a>
@@ -106,32 +107,32 @@ const Header = () => {
                 <div className='relative w-full h-full'>
                     <div className='max-w-[1080px] px-[15px] mx-auto h-full flex justify-between items-center'>
                         <div className='h-full'>
-                            <a href='/'>
+                            <Link to='/'>
                                 <span className="sr-only">Your Company</span>
                                 <img className="h-full w-auto" src={logo} alt="" />
-                            </a>
+                            </Link>
                         </div>
                         <ResponsiveMenu />
                         <div className='hidden md:block'>
                             <ul className='flex'>
                                 <li className='mx-2 relative'>
-                                    <a href='/' className={`${currentTab === "0" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                    <Link to='/' className={`${currentTab === "0" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                         TRANG CHỦ
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className={`${currentTab === "1" ? 'active' : ''} mx-2 relative  option-style`}>
                                     <DropDown />
                                 </li>
                                 <li className='mx-2 relative'>
-                                    <a href='/tin-tuc' className={`${currentTab === "2" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                    <Link to='/tin-tuc' className={`${currentTab === "2" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                         TIN TỨC
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className='mx-2 relative'>
                                     <HashLink to='/du-an/#du-an' className="w-1/3">
-                                        <a href='' className={`${currentTab === "3" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                        <p className={`${currentTab === "3" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                             DỰ ÁN
-                                        </a>
+                                        </p>
                                     </HashLink>
                                 </li><li className='mx-2 relative'>
                                     <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')} className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">

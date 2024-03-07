@@ -7,6 +7,7 @@ import packagePremium from '../../assets/img/Packing-design_Cao-cap.svg'
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import Footer from '../../components/Footer';
+import Banner2 from '../../components/Banner2';
 
 const DetailPackageDesign = () => {
     const titleArray = ['Packing Design', 'thổi hồn vào từng chiếc hộp mang thương hiệu đến khách hàng'];
@@ -14,13 +15,13 @@ const DetailPackageDesign = () => {
         <div>
             <Header />
             {/* Banner */}
-            <div className='h-[full] w-full relative'>
+            {/* <div className='h-[full] w-full relative'>
                 <div className={`pt-[56.25%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
-           
+
                         <div className={`bg3 absolute top-0 left-0 w-full h-full bg-packageDesign bg-cover`}></div>
 
-  
+
                         <div className='relative h-full'>
                             <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
                                 <div className='absolute top-0 bottom-0 right-0 left-0 h-full w-full' />
@@ -38,9 +39,9 @@ const DetailPackageDesign = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <Banner customPT="56.25%" customClassName="bg3" customBg="packageDesign" customWidth="31%" customTop="34%" titleArr={titleArray} /> */}
-
+            <Banner2 titleArray={titleArray} image="bg-packageDesign" position="0% 10%" width="31%" top="34%" height="56.25%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>

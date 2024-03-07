@@ -8,13 +8,14 @@ import logoKH from "../../assets/img/LOGO-KHACH-HANG.png"
 
 import Banner from '../../components/Banner';
 import './brandDesign.css'
+import Banner2 from '../../components/Banner2';
 const BrandDesign = () => {
     const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
             <Header />
             {/* Banner */}
-            <div className='h-[full] w-full relative'>
+            {/* <div className='h-[full] w-full relative'>
                 <div className={`pt-[50%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
 
@@ -37,9 +38,9 @@ const BrandDesign = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <Banner customPT="50%" customClassName="bg2" customBg="brandDesign" customWidth="44%" customTop="34%" titleArr={titleArray} /> */}
-
+            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="44%" top="34%" height="50%" />
             <section className='flex'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto'>

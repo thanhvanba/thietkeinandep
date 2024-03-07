@@ -19,7 +19,7 @@ const Footer = () => {
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Thiết kế bao bì</span>
                                     </a>
-                                    <a href="/in-an-san-xuat" className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <a href="/san-xuat-in-an" className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>In ấn sản xuất</span>
                                     </a>

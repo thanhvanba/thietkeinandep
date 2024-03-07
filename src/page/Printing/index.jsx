@@ -9,13 +9,14 @@ import logoKH from "../../assets/img/LOGO-KHACH-HANG.png"
 import Banner from '../../components/Banner';
 
 import './printing.css'
+import Banner2 from '../../components/Banner2';
 const Printing = () => {
     const titleArray = ['Printing', 'thổi hồn vào từng chiếc hộp mang', ' thương hiệu đến khách hàng'];
     return (
         <div>
             <Header />
             {/* Banner */}
-            <div className='h-[full] w-full relative'>
+            {/* <div className='h-[full] w-full relative'>
                 <div className={`pt-[52.25%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
 
@@ -39,9 +40,9 @@ const Printing = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <Banner customPT="55.25%" customClassName="bg4" customBg="printing" customWidth="44%" customTop="25%" titleArr={titleArray} /> */}
-
+            <Banner2 titleArray={titleArray} image="bg-printing" position="0% 0%" width="44%" top="27%" height="52.25%" />
             <section className='flex'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto'>

@@ -9,13 +9,14 @@ import logoKH from "../../assets/img/LOGO-KHACH-HANG.png"
 
 import Banner from '../../components/Banner';
 import './PackageDesign.css'
+import Banner2 from '../../components/Banner2';
 const PackageDesign = () => {
     const titleArray = ['Packing Design', 'thổi hồn vào từng chiếc hộp mang thương hiệu đến khách hàng'];
     return (
         <div>
             <Header />
             {/* Banner */}
-            <div className='h-[full] w-full relative'>
+            {/* <div className='h-[full] w-full relative'>
                 <div className={`pt-[56.25%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
 
@@ -39,9 +40,9 @@ const PackageDesign = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <Banner customPT="56.25%" customClassName="bg3" customBg="packageDesign" customWidth="31%" customTop="34%" titleArr={titleArray} /> */}
-
+            <Banner2 titleArray={titleArray} image="bg-packageDesign" position="0% 10%" width="31%" top="34%" height="56.25%" />
             <section className='flex'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto'>

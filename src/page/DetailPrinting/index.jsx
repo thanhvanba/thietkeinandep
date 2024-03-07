@@ -7,6 +7,7 @@ import printPremium from '../../assets/img/POSM-Printing.jpg'
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import Footer from '../../components/Footer';
+import Banner2 from '../../components/Banner2';
 
 const DetailPrinting = () => {
     const titleArray = ['Printing', 'thổi hồn vào từng chiếc hộp mang', ' thương hiệu đến khách hàng'];
@@ -14,7 +15,7 @@ const DetailPrinting = () => {
         <div>
             <Header />
             {/* Banner */}
-            <div className='h-[full] w-full relative'>
+            {/* <div className='h-[full] w-full relative'>
                 <div className={`pt-[52.25%] relative h-full w-full`}>
                     <div className='absolute top-0 left-0 right-0 bottom-0 h-full p-0 m-0'>
 
@@ -38,9 +39,9 @@ const DetailPrinting = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <Banner customPT="52.25%" customClassName="bg4" customBg="printing" customWidth="44%" customTop="25%" titleArr={titleArray} /> */}
-
+            <Banner2 titleArray={titleArray} image="bg-printing" position="0% 0%" width="44%" top="27%" height="52.25%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>

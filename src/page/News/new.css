@@ -1,0 +1,8 @@
+.news-item:hover .news-over {
+    display: block;
+    transform: scale(1.1);
+}
+
+.news-item {
+    overflow: hidden;
+}

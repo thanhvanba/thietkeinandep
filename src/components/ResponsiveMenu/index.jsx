@@ -82,7 +82,7 @@ const App = () => {
                                 <a href="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</a>
                             </li>
                             <li className="pl-2">
-                                <a href="/in-an-san-xuat" className='pl-5 py-[5px] flex'>In ấn sản xuất</a>
+                                <a href="/san-xuat-in-an" className='pl-5 py-[5px] flex'>In ấn sản xuất</a>
                             </li>
                         </ul>
 
@@ -95,7 +95,7 @@ const App = () => {
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
                         <div className='pl-5 py-[15px] flex'>
                             <HashLink to='/du-an/#du-an'>
-                                <a href="">Dự án</a>
+                                <p href="">Dự án</p>
                             </HashLink>
                         </div>
                     </li>
