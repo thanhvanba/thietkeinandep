@@ -31,10 +31,14 @@ const DetailNews = () => {
     return (
         <div>
             <Header />
-            <Banner3 title={news && news.title && news.title.rendered ? news.title.rendered : 'N/A'} />
+            <Banner3 title={news && news.title && news.title.rendered ? news.title.rendered : ''} />
             <div className='py-[30px]'>
-                <div className='max-w-[1110px] mx-auto'>
-                    <div> {news && news.content && news.content.rendered ? parse(`${news.content.rendered}`) : 'N/A'}</div>
+                <div className='max-w-[1110px] mx-auto flex'>
+                    <div className='w-3/4 px-[30px] pb-[30px]'> {news && news.content && news.content.rendered ? parse(`${news.content.rendered}`) : ''}</div>
+
+                    <div className='w-1/4 p-[30px]'>
+                        ss
+                    </div>
                 </div>
             </div>
             <Footer />

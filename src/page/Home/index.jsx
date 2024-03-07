@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
+import parse from 'html-react-parser';
 
-import pro1 from "../../assets/img/NDTH-RUOU-05.jpg"
-import pro2 from "../../assets/img/Thiet-ke-logo-nhan-dien-thuong-hieu-CSSgroup-1.jpg"
-import pro3 from "../../assets/img/Thiet-ke-Logo-nhan-dien-thuong-hieu-Bamboo-Phu-Quoc-Resort.jpg"
-import pro4 from "../../assets/img/Thiet-ke-logo-nhan-dien-thuong-hieu-nha-hang-song-vien-27.jpg"
+import logo from "../../assets/img/LOGO.png"
 import logoKH from "../../assets/img/LOGO-KHACH-HANG.png"
 
 import ServicesComponent from '../../components/ServicesComponent';
@@ -17,23 +15,32 @@ import Banner2 from '../../components/Banner2';
 import Apiservice from '../../service/apiservice';
 
 import './home.css'
+import { MinusIcon } from '@heroicons/react/20/solid';
+import TruncatedContent from '../../utils/TruncatedContent';
 const Home = () => {
   const titleArray = ['Chúng tôi cùng bạn tạo nên kết nối', 'từ thương hiệu đến khách hàng'];
 
-  const { serviceApi, projectApi } = Apiservice()
+  const { serviceApi, projectApi, newsApi } = Apiservice()
 
   const [services, setServices] = useState([])
   const [projects, setProjects] = useState([])
-  console.log("🚀 ~ Home ~ projects:", projects)
-
+  const [news1, setNews1] = useState([])
+  const [news2, setNews2] = useState([])
   const handleGetItem = async () => {
     let resService = await serviceApi()
     let resProject = await projectApi()
+    let resNews = await newsApi()
+
     if (resService && resService.data)
       setServices(resService.data)
 
     if (resProject && resProject.data)
       setProjects(resProject.data)
+
+    if (resNews && resNews.data) {
+      setNews1(resNews.data.slice(0, 2))
+      setNews2(resNews.data.slice(2, 5))
+    }
   }
   useEffect(() => {
     handleGetItem()
@@ -125,7 +132,80 @@ const Home = () => {
 
       {/* Tin tức */}
       <section >
+        <div className='flex mt-[30px] max-w-[1080px] mx-auto w-full'>
+          <div className='relative px-[15px] pb-[30px] w-full'>
+            <div className='border-[1px] border-dashed flex justify-center items-start bg-[#CECECE]'>
+              {news1.map((post) => (
+                <div className='px-0.5 pb-[3px] w-1/2'>
+                  <Link to={`/tin-tuc/${post.slug}`}>
+                    <div>
+                      <div className="table w-full">
+                        <div className="table-cell w-[25%] align-middle" >
+                          <div className="" >
+                            <img className='' src={logo} alt="" />
+                          </div>
+                        </div>
+                        <div className="table-cell group pt-[10px] ">
+                          <div className="font-lato font-bold">
+                            <p className="text-[8.64px] my-[0.1em] px-[5px] py-0.5 opacity-70 uppercase inline-block rounded-sm bg-[#00000066] group-hover:bg-[#D26E4B] group-hover:opacity-100 text-white">
+                              Tin tức
+                            </p>
+                            <h5 className="text-[#555] text-[16.56px] mt-[0.1em]">{post && post.title && post.title.rendered ? post.title.rendered : ""}</h5>
+                            <div className="text-[#777] text-[11.52px] font-normal group-hover:text-[#000]">Tháng Ba 2, 2023</div>
+                            <MinusIcon className='relative text-start h-8 w-6 -ml-1 -my-2 text-[#0000001A]' />
+                            <p className="text-[#777] text-[14.4px] mt-[0.1em] font-normal group-hover:text-[#000]">
+                              {
+                                post && post.excerpt && post.excerpt.rendered ?
+                                  parse(`${post.excerpt.rendered}`)[0].props.children.slice(0, 130) + '...Xem chi tiết' :
+                                  ''
+                              }
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))
+              }
+            </div>
+          </div>
+        </div>
+        <div className='flex max-w-[1080px] mx-auto w-full'>
+          <div className='relative px-[15px] pb-[30px] w-full'>
+            <div className='flex place-items-start'>
+              {news2.map((post) => (
+                <div className="px-0.5 pb-[3px] w-1/3">
 
+                  <Link to={`/tin-tuc/${post.slug}`}>
+                    <div className=''>
+                      <div className="px-[1.5em] pt-[0.7em] pb-[1.4em]">
+                        <div className="table-cell group pt-[10px] ">
+                          <div className="font-lato font-bold">
+                            <p className="text-[8.64px] my-[0.1em] px-[5px] py-0.5 opacity-70 uppercase inline-block rounded-sm bg-[#00000066] group-hover:bg-[#D26E4B] group-hover:opacity-100 text-white">
+                              Tin tức
+                            </p>
+                            <h5 className="text-[#555] text-[16.56px] mt-[0.1em]">{post && post.title && post.title.rendered ? post.title.rendered : ""}</h5>
+                            <div className="text-[#777] text-[11.52px] font-normal group-hover:text-[#000]">Tháng Ba 2, 2023</div>
+                            <MinusIcon className='relative text-start h-8 w-6 -ml-1 -my-2 text-[#0000001A]' />
+                            <p className="text-[#777] text-[14.4px] mt-[0.1em] font-normal group-hover:text-[#000]">
+                              {
+                                post && post.excerpt && post.excerpt.rendered ?
+                                  parse(`${post.excerpt.rendered}`)[0].props.children.slice(0, 130) + '...Xem chi tiết' :
+                                  ''
+                              }
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+
+              ))}
+            </div>
+          </div>
+        </div>
       </section >
       <Footer />
     </div >

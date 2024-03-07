@@ -87,7 +87,7 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li className='mx-2 relative'>
-                                    <HashLink to='/du-an/#du-an' className="w-1/3">
+                                    <HashLink to='/#du-an' className="w-1/3">
                                         <p className={`${currentTab === "3" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                             DỰ ÁN
                                         </p>
@@ -129,7 +129,7 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li className='mx-2 relative'>
-                                    <HashLink to='/du-an/#du-an' className="w-1/3">
+                                    <HashLink to='/#du-an' className="w-1/3">
                                         <p className={`${currentTab === "3" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
                                             DỰ ÁN
                                         </p>

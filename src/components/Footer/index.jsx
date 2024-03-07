@@ -2,6 +2,7 @@ import React from 'react'
 
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import "./footer.css"
+import { HashLink } from 'react-router-hash-link'
 const Footer = () => {
     return (
         <footer className='w-full relative'>
@@ -37,10 +38,10 @@ const Footer = () => {
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Tin tức</span>
                                     </a>
-                                    <a href="/" className='flex items-center leading-relaxed py-[4.8px]'>
+                                     <HashLink to='/#du-an' className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Các dự án đã thực hiện</span>
-                                    </a>
+                                    </HashLink>
                                 </div>
                             </div>
                         </div>
