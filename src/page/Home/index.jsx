@@ -16,7 +16,6 @@ import Apiservice from '../../service/apiservice';
 
 import './home.css'
 import { MinusIcon } from '@heroicons/react/20/solid';
-import TruncatedContent from '../../utils/TruncatedContent';
 const Home = () => {
   const titleArray = ['Chúng tôi cùng bạn tạo nên kết nối', 'từ thương hiệu đến khách hàng'];
 
