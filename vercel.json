@@ -18,5 +18,12 @@
       "src": "/",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "framework": "vite"
 }
