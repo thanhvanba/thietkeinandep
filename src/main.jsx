@@ -10,7 +10,7 @@ import Loader from './components/Loader/index.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Loader />
+      {/* <Loader /> */}
       {/* <LoaderStyle2 /> */}
       <ScrollToTop />
       <App />
