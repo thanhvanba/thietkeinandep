@@ -10,27 +10,27 @@ import Footer from '../../components/Footer';
 import Banner2 from '../../components/Banner2';
 
 const DetailBrandDesign = () => {
-    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn ghi dấu vào trái tim khách hàng.'];
+    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
             <Header />
             {/* Banner */}
             {/* <Banner customPT="50%" customClassName="bg2" customBg="brandDesign" customWidth="44%" customTop="34%" titleArr={titleArray} /> */}
-            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="44%" top="34%" height="50%" />
+            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="" top="34%" height="50%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div id='logodesigncoban' className='px-[15px] pb-[30px]'>
+                        <div id='logodesigncoban' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={logoBasic} alt="" />
                             </div>
                         </div>
-                        <div id='logodesignnangcao' className='px-[15px] pb-[30px]'>
+                        <div id='logodesignnangcao' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={logoAdvanced} alt="" />
                             </div>
                         </div>
-                        <div id='logodesigncaocap' className='px-[15px] pb-[30px]'>
+                        <div id='logodesigncaocap' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className=''>
                                 <img className='w-full h-full object-cover' src={logoPremium} alt="" />
                             </div>
@@ -45,10 +45,9 @@ const DetailBrandDesign = () => {
                         <div className='px-[15px] pb-[30px]'>
                             <div className='w-2/3 mx-auto'>
                                 <br />
-                                <p className='font-alexandria uppercase text-[40px] text-[#334862] text-center'>điều khoản chung</p>
-                                <br />
+                                <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-[#334862] text-center'>điều khoản chung</p>
                             </div>
-                            <div className='font-roboto relative'>
+                            <div className='font-roboto relative text-sm sm:text-base'>
                                 <div className='red-line' />
                                 <div className='mt-5 relative'>
                                     <div className='list-bullet mr-5' />

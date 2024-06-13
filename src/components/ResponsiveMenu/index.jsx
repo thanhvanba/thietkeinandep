@@ -5,6 +5,7 @@ import { FacebookIcon, Instagram, Twitter, Mail } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link'
 
 import logo from "../../assets/img/LOGO.png"
+import { Link } from 'react-router-dom';
 
 const App = () => {
     const [open, setOpen] = useState(false);
@@ -54,20 +55,20 @@ const App = () => {
             >
                 <ul className="relative text-center font-lato text-[16px] text-[#666] pt-5">
                     <li className='flex items-center justify-center'>
-                        <a href='/' className='h-32 w-32 '>
+                        <Link to='/' className='h-32 w-32 '>
                             <span className="sr-only">Your Company</span>
                             <img className="h-full w-auto" src={logo} alt="" />
-                        </a>
+                        </Link>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
                         <div className='pl-5 py-[15px] flex '>
-                            <a href="/">Trang chủ</a>
+                            <Link to="/">Trang chủ</Link>
                         </div>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px]">
                         <div className='flex flex-row font-extrabold uppercase text-black items-center'>
                             <div className='pl-5 py-[15px] flex flex-grow'>
-                                <a href="#service">Dịch vụ</a>
+                                <p onClick={showService} >Dịch vụ</p>
                             </div>
                             <div className='w-11 h-10 relative'>
                                 <ChevronUpDownIcon onClick={showService} className='w-6 h-6 absolute top-1 left-2 font-normal' />
@@ -76,20 +77,20 @@ const App = () => {
 
                         <ul className={`${show ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
                             <li className="pl-2">
-                                <a href="/thiet-ke-thuong-hieu" className='pl-5 py-[5px] flex'>Thiết kế thương hiệu</a>
+                                <Link to="/thiet-ke-thuong-hieu" className='pl-5 py-[5px] flex'>Thiết kế thương hiệu</Link>
                             </li>
                             <li className="pl-2">
-                                <a href="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</a>
+                                <Link to="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</Link>
                             </li>
                             <li className="pl-2">
-                                <a href="/san-xuat-in-an" className='pl-5 py-[5px] flex'>In ấn sản xuất</a>
+                                <Link to="/san-xuat-in-an" className='pl-5 py-[5px] flex'>In ấn sản xuất</Link>
                             </li>
                         </ul>
 
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
                         <div className='pl-5 py-[15px]  flex'>
-                            <a href="/tin-tuc">Tin tức</a>
+                            <Link to="/tin-tuc">Tin tức</Link>
                         </div>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
@@ -101,10 +102,10 @@ const App = () => {
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
                         <div className='pl-5 py-[15px] flex'>
-                            <a href="https://zalo.me/0906260488">Liên hệ</a>
+                            <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')}>Liên hệ</a>
                         </div>
                     </li>
-                    WooCommerce not Found
+                    {/* WooCommerce not Found
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
                         <div className='pl-5 py-[15px]  flex'>
                             <a href="#header-newsletter-signup" className="tooltip" title="Sign up for Newsletter">
@@ -121,7 +122,7 @@ const App = () => {
                             <Twitter className='h-4 w-4 mx-1' />
                             <Mail className='h-4 w-4 mx-1' />
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
             </Drawer>
         </>

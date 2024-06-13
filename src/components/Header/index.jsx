@@ -61,7 +61,7 @@ const Header = () => {
     });
     return (
         <>
-            <animated.header style={slideIn} className={`block w-full ${isScrolled ? 'scrolled active' : 'bg-transparent absolute z-30 h-[120px]'}`}>
+            <animated.header style={slideIn} className={`block w-full ${isScrolled ? 'scrolled active' : 'bg-transparent absolute z-30 h-20 sm:h-[120px]'}`}>
                 <div className='relative w-full h-full'>
                     <div className='max-w-[1080px] px-[15px] mx-auto h-full flex justify-between items-center'>
                         <div className='h-full'>
@@ -103,7 +103,7 @@ const Header = () => {
                     </div>
                 </div >
             </animated.header >
-            <animated.header className={`block w-full ${isScrolled ? 'hidden' : 'bg-transparent absolute z-30 h-[120px]'}`}>
+            <animated.header className={`block w-full ${isScrolled ? 'hidden' : 'bg-transparent absolute z-30 h-20 sm:h-[120px]'}`}>
                 <div className='relative w-full h-full'>
                     <div className='max-w-[1080px] px-[15px] mx-auto h-full flex justify-between items-center'>
                         <div className='h-full'>

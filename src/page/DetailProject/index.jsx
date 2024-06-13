@@ -52,7 +52,7 @@ const DetailProject = () => {
                     <div className='max-w-[1080px] mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             {
-                                project && <div className='font-roboto relative'>
+                                project && <div className='font-roboto relative text-sm sm:text-base'>
                                     <div className='red-line' />
                                     <div className='mt-5 relative'>
                                         <div className='list-bullet mr-5' />
@@ -104,7 +104,7 @@ const DetailProject = () => {
                                     </div>
                                 </div>
                             }
-                            <div className=''> {project && project.content && project.content.rendered ? parse(`${project.content.rendered}`) : ''}</div>
+                            <div className='text-sm sm:text-base'> {project && project.content && project.content.rendered ? parse(`${project.content.rendered}`) : ''}</div>
                         </div>
                     </div>
                 </div>

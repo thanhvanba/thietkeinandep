@@ -10,22 +10,21 @@ import Banner from '../../components/Banner';
 import './brandDesign.css'
 import Banner2 from '../../components/Banner2';
 const BrandDesign = () => {
-    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn ghi dấu vào trái tim khách hàng.'];
+    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', 'Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
             <Header />
             {/* Banner */}
-            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="44%" top="34%" height="50%" />
+            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="" top="34%" height="50%" />
             <section className='flex'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
-                            <div className='w-1/2 mx-auto'>
+                            <div className='md:w-3/4 mx-auto'>
                                 <br />
-                                <p className='font-alexandria uppercase text-[20pt] text-[#334862] text-center'>Quy trình làm việc</p>
-                                <br />
+                                <p className='font-alexandria uppercase text-[20px] sm:text-[20pt] text-[#334862] text-center'>Quy trình làm việc</p>
                             </div>
-                            <div className='font-roboto relative'>
+                            <div className='font-roboto relative text-sm sm:text-base'>
                                 <div className='red-line' />
                                 <div className='mt-5 relative'>
                                     <div className='list-bullet mr-5' />
@@ -104,7 +103,7 @@ const BrandDesign = () => {
                 <div className='relative w-full'>
                     <div className='w-1/2 mx-auto'>
                         <br />
-                        <p className='font-alexandria uppercase text-[20pt] text-[#334862] text-center'>Các gói dịch vụ</p>
+                        <p className='font-alexandria uppercase text-[20px] sm:text-[20pt] text-[#334862] text-center'>Các gói dịch vụ</p>
                         <br />
                     </div>
                     <div className='max-w-[1080px] mx-auto flex flex-col sm:flex-row'>
@@ -154,10 +153,9 @@ const BrandDesign = () => {
                         <div className='px-[15px] pb-[30px]'>
                             <div className='w-1/2 mx-auto'>
                                 <br />
-                                <p className='font-alexandria uppercase text-[20pt] text-[#334862] text-center'>Các dạng file</p>
-                                <br />
+                                <p className='font-alexandria uppercase text-[20px] sm:text-[20pt] text-[#334862] text-center'>Các dạng file</p>
                             </div>
-                            <div className='font-roboto relative'>
+                            <div className='font-roboto relative text-sm sm:text-base'>
                                 <div className='red-line' />
                                 <div className='mt-5 relative'>
                                     <div className='list-bullet mr-5' />
@@ -215,8 +213,8 @@ const BrandDesign = () => {
                     <div className='max-w-[1080px] mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <div className='text-center pt-[15px]'>
-                                <div className='w-2/3 m-auto'>
-                                    <p className='font-alexandria uppercase text-[25pt] text-black text-center'>CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI !</p>
+                                <div className='md:w-2/3 m-auto'>
+                                    <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-black text-center'>CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI !</p>
                                 </div>
                                 <div className='-mb-20'>
                                     <img className='w-full h-full object-cover' src={logoKH} alt="" />

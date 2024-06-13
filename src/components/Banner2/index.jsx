@@ -12,7 +12,7 @@ export default function Banner2({ titleArray = [], image, position, width, top, 
                 >
                     <div className="h-full">
                         <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
-                            <div className={`absolute hidden sm:block left-[0%]`}
+                            <div className={`absolute hidden sm:block left-[1%]`}
                                 style={{ width: `${width}`, top: `${top}` }}
                             >
                                 <p className="">

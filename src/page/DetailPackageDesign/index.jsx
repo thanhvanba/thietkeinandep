@@ -10,26 +10,26 @@ import Footer from '../../components/Footer';
 import Banner2 from '../../components/Banner2';
 
 const DetailPackageDesign = () => {
-    const titleArray = ['Packing Design', 'thổi hồn vào từng chiếc hộp mang thương hiệu đến khách hàng'];
+    const titleArray = ['Packing Design', 'thổi hồn vào từng chiếc hộp mang', 'thương hiệu đến khách hàng'];
     return (
         <div>
             <Header />
             {/* Banner */}
-            <Banner2 titleArray={titleArray} image="bg-packageDesign" position="0% 10%" width="31%" top="34%" height="56.25%" />
+            <Banner2 titleArray={titleArray} image="bg-packageDesign" position="0% 10%" width="" top="34%" height="56.25%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div id='packingdesigncoban' className='px-[15px] pb-[30px]'>
+                        <div id='packingdesigncoban' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={packageBasic} alt="" />
                             </div>
                         </div>
-                        <div id='packingdesignnangcao' className='px-[15px] pb-[30px]'>
+                        <div id='packingdesignnangcao' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={packageAdvanced} alt="" />
                             </div>
                         </div>
-                        <div id='packingdesigncaocap' className='px-[15px] pb-[30px]'>
+                        <div id='packingdesigncaocap' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className=''>
                                 <img className='w-full h-full object-cover' src={packagePremium} alt="" />
                             </div>
@@ -44,10 +44,9 @@ const DetailPackageDesign = () => {
                         <div className='px-[15px] pb-[30px]'>
                             <div className='w-2/3 mx-auto'>
                                 <br />
-                                <p className='font-alexandria uppercase text-[40px] text-[#334862] text-center'>điều khoản chung</p>
-                                <br />
+                                <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-[#334862] text-center'>điều khoản chung</p>
                             </div>
-                            <div className='font-roboto relative'>
+                            <div className='font-roboto relative text-sm sm:text-base'>
                                 <div className='red-line' />
                                 <div className='mt-5 relative'>
                                     <div className='list-bullet mr-5' />

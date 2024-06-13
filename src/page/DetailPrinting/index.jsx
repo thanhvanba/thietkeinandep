@@ -15,21 +15,21 @@ const DetailPrinting = () => {
         <div>
             <Header />
             {/* Banner */}
-            <Banner2 titleArray={titleArray} image="bg-printing" position="0% 0%" width="44%" top="27%" height="52.25%" />
+            <Banner2 titleArray={titleArray} image="bg-printing" position="0% 0%" width="" top="27%" height="52.25%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div id='innhanhkts' className='px-[15px] pb-[30px]'>
+                        <div id='innhanhkts' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={printBasic} alt="" />
                             </div>
                         </div>
-                        <div id='offset' className='px-[15px] pb-[30px]'>
+                        <div id='offset' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className='-mb-[30px]'>
                                 <img className='w-full h-full object-cover' src={printAdvanced} alt="" />
                             </div>
                         </div>
-                        <div id='posm' className='px-[15px] pb-[30px]'>
+                        <div id='posm' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                             <div className=''>
                                 <img className='w-full h-full object-cover' src={printPremium} alt="" />
                             </div>
@@ -44,10 +44,9 @@ const DetailPrinting = () => {
                         <div className='px-[15px] pb-[30px]'>
                             <div className='w-2/3 mx-auto'>
                                 <br />
-                                <p className='font-alexandria uppercase text-[40px] text-[#334862] text-center'>điều khoản chung</p>
-                                <br />
+                                <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-[#334862] text-center'>điều khoản chung</p>
                             </div>
-                            <div className='font-roboto relative'>
+                            <div className='font-roboto relative text-sm sm:text-base'>
                                 <div className='red-line' />
                                 <div className='mt-5 relative'>
                                     <div className='list-bullet mr-5' />

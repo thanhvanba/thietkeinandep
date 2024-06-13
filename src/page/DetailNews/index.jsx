@@ -34,9 +34,9 @@ const DetailNews = () => {
             <Banner3 title={news && news.title && news.title.rendered ? news.title.rendered : ''} />
             <div className='py-[30px]'>
                 <div className='max-w-[1320px] mx-auto flex'>
-                    <div className='w-2/3 px-[30px] pb-[30px]'> {news && news.content && news.content.rendered ? parse(`${news.content.rendered}`) : ''}</div>
+                    <div className='sm:w-2/3 px-[30px] pb-[30px] text-sm sm:text-base'> {news && news.content && news.content.rendered ? parse(`${news.content.rendered}`) : ''}</div>
 
-                    <div className='w-1/3 px-8 space-y-4'>
+                    <div className='hidden sm:block w-1/3 px-8 space-y-4'>
                         <h2 className='text-xl font-semibold uppercase font-lato'>Thiết kế in ấn đẹp</h2>
                         <p className='relative font-light pl-20 font-robotoSlab'><span className='absolute top-0 left-0'>Phone:</span> 0906 260 488</p>
                         <p className='relative font-light pl-20 font-robotoSlab'><span className='absolute top-0 left-0'>Zalo:</span> 0906 260 488</p>

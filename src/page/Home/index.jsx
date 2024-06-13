@@ -16,6 +16,8 @@ import Apiservice from '../../service/apiservice';
 
 import './home.css'
 import { MinusIcon } from '@heroicons/react/20/solid';
+import Loader from '../../components/Loader';
+import LoaderStyle2 from '../../components/LoaderStyle2';
 const Home = () => {
   const titleArray = ['Chúng tôi cùng bạn tạo nên kết nối', 'từ thương hiệu đến khách hàng'];
 
@@ -47,7 +49,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Banner2 titleArray={titleArray} image="bg-header" position="0% 100%" width="44%" top="34%" height="50%" />
+      <Banner2 titleArray={titleArray} image="bg-header" position="0% 100%" width="" top="34%" height="50%" />
       {/* Dịch vụ */}
       <section className='flex bg-[#CECECE]'>
         <div className='relative w-full'>
@@ -75,11 +77,11 @@ const Home = () => {
 
       {/* Dự án đã làm */}
       <section className='flex bg-[#CECECE]' >
-        <div id='du-an' className='relative w-full'>
+        <div id='du-an' className='relative w-full pt-24 -mt-24'>
           <div className=''>
             <div className='relative px-[15px] pb-[30px]'>
-              <div className='w-1/2 m-auto'>
-                <p className='font-alexandria uppercase text-[25pt] text-black text-center'>
+              <div className='md:w-3/5 m-auto'>
+                <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-black text-center'>
                   CÁC DỰ ÁN ĐÃ THỰC HIỆN
                 </p>
               </div>
@@ -109,8 +111,8 @@ const Home = () => {
           <div className='max-w-[1080px] mx-auto'>
             <div className='px-[15px] pb-[30px]'>
               <div className='text-center pt-[15px]'>
-                <div className='w-2/3 m-auto'>
-                  <p className='font-alexandria uppercase text-[25pt] text-black text-center'>CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI !</p>
+                <div className='md:w-2/3 m-auto'>
+                  <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-black text-center'>CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI !</p>
                 </div>
                 <div className=''>
                   <img className='w-full h-full object-cover' src={logoKH} alt="" />
@@ -133,9 +135,9 @@ const Home = () => {
       <section >
         <div className='flex mt-[30px] max-w-[1080px] mx-auto w-full'>
           <div className='relative px-[15px] pb-[30px] w-full'>
-            <div className='border-[1px] border-dashed flex justify-center items-start bg-[#CECECE]'>
+            <div className='border-[1.5px] sm:border-dashed flex justify-center items-start bg-[#CECECE] flex-col sm:flex-row'>
               {news1.map((post) => (
-                <div className='px-0.5 pb-[3px] w-1/2'>
+                <div className='px-0.5 pb-[3px] sm:w-1/2 border-[1.5px]  border-dashed sm:border-none'>
                   <Link to={`/tin-tuc/${post.slug}`}>
                     <div>
                       <div className="table w-full">
@@ -149,10 +151,10 @@ const Home = () => {
                             <p className="text-[8.64px] my-[0.1em] px-[5px] py-0.5 opacity-70 uppercase inline-block rounded-sm bg-[#00000066] group-hover:bg-[#D26E4B] group-hover:opacity-100 text-white">
                               Tin tức
                             </p>
-                            <h5 className="text-[#555] text-[16.56px] mt-[0.1em]">{post && post.title && post.title.rendered ? post.title.rendered : ""}</h5>
-                            <div className="text-[#777] text-[11.52px] font-normal group-hover:text-[#000]">Tháng Ba 2, 2023</div>
+                            <h5 className="text-[#555] text-[14px] sm:text-[16.56px] mt-[0.1em]">{post && post.title && post.title.rendered ? post.title.rendered : ""}</h5>
+                            <div className="text-[#777] text-[10px] sm:text-[11.52px] font-normal group-hover:text-[#000]">Tháng Ba 2, 2023</div>
                             <MinusIcon className='relative text-start h-8 w-6 -ml-1 -my-2 text-[#0000001A]' />
-                            <p className="text-[#777] text-[14.4px] mt-[0.1em] font-normal group-hover:text-[#000]">
+                            <p className="text-[#777] text-[12px] sm:text-[14.4px] mt-[0.1em] font-normal group-hover:text-[#000]">
                               {
                                 post && post.excerpt && post.excerpt.rendered ?
                                   parse(`${post.excerpt.rendered}`)[0].props.children.slice(0, 130) + '...Xem chi tiết' :
@@ -178,16 +180,16 @@ const Home = () => {
 
                   <Link to={`/tin-tuc/${post.slug}`}>
                     <div className=''>
-                      <div className="px-[1.5em] pt-[0.7em] pb-[1.4em]">
+                      <div className="px-1 sm:px-[1.5em] sm:pt-[0.7em] sm:pb-[1.4em]">
                         <div className="table-cell group pt-[10px] ">
                           <div className="font-lato font-bold">
                             <p className="text-[8.64px] my-[0.1em] px-[5px] py-0.5 opacity-70 uppercase inline-block rounded-sm bg-[#00000066] group-hover:bg-[#D26E4B] group-hover:opacity-100 text-white">
                               Tin tức
                             </p>
-                            <h5 className="text-[#555] text-[16.56px] mt-[0.1em]">{post && post.title && post.title.rendered ? post.title.rendered : ""}</h5>
-                            <div className="text-[#777] text-[11.52px] font-normal group-hover:text-[#000]">Tháng Ba 2, 2023</div>
+                            <h5 className="text-[#555] text-[14px] sm:text-[16.56px] mt-[0.1em]">{post && post.title && post.title.rendered ? post.title.rendered : ""}</h5>
+                            <div className="text-[#777] text-[10px] sm:text-[11.52px] font-normal group-hover:text-[#000]">Tháng Ba 2, 2023</div>
                             <MinusIcon className='relative text-start h-8 w-6 -ml-1 -my-2 text-[#0000001A]' />
-                            <p className="text-[#777] text-[14.4px] mt-[0.1em] font-normal group-hover:text-[#000]">
+                            <p className="text-[#777] text-[12px] sm:text-[14.4px] mt-[0.1em] font-normal group-hover:text-[#000]">
                               {
                                 post && post.excerpt && post.excerpt.rendered ?
                                   parse(`${post.excerpt.rendered}`)[0].props.children.slice(0, 130) + '...Xem chi tiết' :

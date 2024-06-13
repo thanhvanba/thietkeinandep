@@ -1,6 +1,7 @@
 .bg2 {
     background-position: 0% 13%;
 }
+
 .red-line {
     background: #cecece;
     z-index: -1;
@@ -17,6 +18,7 @@
     height: 100%;
     position: absolute;
     left: 15px;
+    box-shadow: 0 0 0 0.1px #ffff;
 }
 .list-bullet {
     float: left;
@@ -29,4 +31,21 @@
     font-weight: 700;
     color: white;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .list-bullet {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .red-line {
+        left: 10px;
+    }
+    .white-line {
+        left: 10px;
+    }
 }
