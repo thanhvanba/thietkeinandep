@@ -47,12 +47,6 @@
     display: block;
 }
 
-.alowebtot-nav ul>li a i {
-    width: 33px;
-    height: 33px;
-    display: block;
-    margin: auto;
-}
 
 .alowebtot-nav ul>li a i.ticon-messenger {
     background: url('../../assets/img/facebook_icon.png') no-repeat;
@@ -67,41 +61,43 @@
     background: url('../../assets/img/gmail_icon.png') no-repeat;
     background-size: contain;
     width: 34px;
-    height:34px;
+    height: 34px;
     display: block;
 }
 
+.alowebtot-nav ul>li a i {
+    width: 33px;
+    height: 33px;
+    display: block;
+    margin: auto;
+}
 
-@media only screen and (max-width: 600px) {
-    .alowebtot-nav li .chat_animation {
-        display: block !Important
+
+@media only screen and (max-width: 768px) {
+    .alowebtot-nav {
+        left: 46px;
+        bottom: 120px;
     }
 
-    .alowebtot-nav ul>li a {
-        padding: 0;
-        margin: 0 auto
+    .alowebtot-nav ul>li a i.ticon-heart {
+        width: 30px;
+        height: 30px;
     }
 
-    /* .alowebtot-nav {
-        background: white;
-        width: 100%;
-        border-radius: 0;
-        color: #fff;
-        height: 60px;
-        line-height: 50px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 999;
-        padding: 5px;
-        margin: 0;
-        box-shadow: 0 4px 10px 0 #000;
-    } */
+    .alowebtot-nav ul>li a i.ticon-zalo-circle2 {
+        width: 30px;
+        height: 30px;
+    }
 
-    .alowebtot-nav li {
-        float: left;
-        width: 20%;
-        list-style: none;
-        height: 50px;
+
+    .alowebtot-nav ul>li a i.ticon-messenger {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .alowebtot-nav ul>li a i.ticon-chat-sms {
+        width: 24px;
+        height: 24px;
     }
 }
