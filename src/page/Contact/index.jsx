@@ -33,7 +33,7 @@ function Contact() {
                     </h3>
                     <p className='relative pl-10 md:pl-20 text-sx md:text-base font-lato'><span className='absolute top-0 left-0 text-[#334862]'>Địa chỉ:</span>52/3 Thạnh Xuân 38, P. Thạnh Xuân, Quận 12, Tp. HCM</p>
                     <p className='relative pl-10 md:pl-20 text-sx md:text-base font-lato'><span className='absolute top-0 left-0 text-[#334862]'>SĐT:</span> 0906 260 488</p>
-                    <p className='relative pl-10 md:pl-20 text-sx md:text-base font-lato'><span className='absolute top-0 left-0 text-[#334862]'>Email:</span> thietkeinandep@gmail.com</p>
+                    <p className='relative pl-10 md:pl-20 text-sx md:text-base font-lato'><span className='absolute top-0 left-0 text-[#334862]'>Email:</span> ndqlinh@gmail.com</p>
                     <div className='flex justify-center'>
                         <div className='w-[670px] h-[240px] md:w-[1320px] md:h-[450px]'>
                             <iframe

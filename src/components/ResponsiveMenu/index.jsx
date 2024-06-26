@@ -102,7 +102,7 @@ const App = () => {
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
                         <div className='pl-5 py-[15px] flex'>
-                            <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')}>Liên hệ</a>
+                        <Link to="/lien-he">Liên hệ</Link>
                         </div>
                     </li>
                     {/* WooCommerce not Found
