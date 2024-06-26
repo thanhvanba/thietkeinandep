@@ -89,7 +89,7 @@ function BluginContact() {
                     </div>
                 </div>
             </div>
-            <a href='#' className="fixed right-5 w-auto z-50 bottom-[50px] ticon-angle-up">
+            <a href='#' className="hidden md:block fixed right-5 w-auto z-50 bottom-[50px] ticon-angle-up">
                 <div className="bg-[#009cf2] p-2 rounded-full">
                     <ChevronsUp className='w-4 h-4 sm:w-6 sm:h-6 md:h-8 md:w-8 text-white font-extrabold' />
                 </div>
