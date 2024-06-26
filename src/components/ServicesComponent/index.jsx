@@ -1,15 +1,16 @@
 import React from 'react'
+import './index.css'
 
 const ServicesComponent = ({ colBg, name, colName, nameE, colNameE, text1, text2, colText }) => {
     return (
-        <div className=''>
-            <div style={{ backgroundColor: colBg, padding: '20px' }}>
+        <div className='h-full'>
+            <div className='card px-5 sm:px-3 md:px-4 lg:px-5 py-5 h-full' style={{ backgroundColor: colBg}} >
                 <h6
                     style={{ color: colName }}
-                    className={`font-roboto font-bold text-[0.85em] mb-[0.5em] uppercase opacity-80`}>
+                    className={`font-roboto font-bold text-[0.85em] uppercase opacity-80`}>
                     {name}
                 </h6>
-                <h1 className='font-playfairDisplay font-bold text-[1.7em] mb-[0.5em] uppercase'>
+                <h1 className='font-playfairDisplay font-bold text-[1.7em] uppercase leading-8'>
                     <p
                         style={{ color: colNameE }}
                     >
@@ -18,7 +19,7 @@ const ServicesComponent = ({ colBg, name, colName, nameE, colNameE, text1, text2
                 </h1>
                 <p
                     style={{ color: colText }}
-                    className={`font-roboto pt-12 mb-4 text-right text-[11pt]`}
+                    className={`font-roboto mb-4 text-right text-[11pt] md:text[9pt] lg:text-[11pt]`}
                 >
                     {text1}
                     <br />

@@ -24,9 +24,9 @@ const LoaderStyle2 = () => {
     return (
         <div className="cs_preloader" style={preloaderStyle}>
             <div className='h-screen w-full flex justify-center items-center'>
-                <div class="loader relative w-1/2 h-1/2 flex justify-center">
+                <div className="loader relative w-1/2 h-1/2 flex justify-center text-orange-500">
                     <svg
-                        class="logo"
+                        className="logo"
                         xmlns="http://www.w3.org/2000/svg"
                         width="300"
                         height="300"
@@ -39,7 +39,7 @@ const LoaderStyle2 = () => {
                     </svg>
                 </div>
 
-                <p className='loader absolute top-3/4 font-serif text-xl'>Welcome to ThietKeInAnDep. Loading ..</p>
+                <p className='loader absolute top-3/4 font-serif text-sm sm:text-xl'>Welcome to ThietKeInAnDep. Loading ..</p>
             </div>
         </div>
     )

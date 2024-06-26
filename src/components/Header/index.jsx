@@ -32,7 +32,10 @@ const Header = () => {
                 break;;
             case "/du-an":
                 setCurrentTab("3")
-                break;;
+                break;
+            case "/lien-he":
+                setCurrentTab("4")
+                break;
         }
     }
     const handleScroll = () => {
@@ -94,9 +97,12 @@ const Header = () => {
                                     </HashLink>
                                 </li>
                                 <li className='mx-2 relative'>
-                                    <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')} className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">
+                                    {/* <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')} className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">
                                         LIÊN HỆ
-                                    </a>
+                                    </a> */}
+                                    <Link to='/lien-he' className={`${currentTab === "4" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                        LIÊN HỆ
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -135,9 +141,12 @@ const Header = () => {
                                         </p>
                                     </HashLink>
                                 </li><li className='mx-2 relative'>
-                                    <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')} className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">
+                                    {/* <a href='#' onClick={() => window.open("https://zalo.me/0906260488", '_blank')} className="flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style">
                                         LIÊN HỆ
-                                    </a>
+                                    </a> */}
+                                    <Link to='/lien-he' className={`${currentTab === "4" ? 'active' : ''} flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2 option-style`}>
+                                        LIÊN HỆ
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

@@ -8,8 +8,15 @@ import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import Footer from '../../components/Footer';
 import Banner2 from '../../components/Banner2';
+import { useLocation } from 'react-router-dom';
+import Pricing from '../../components/Pricing';
 
 const DetailBrandDesign = () => {
+    const location = useLocation();
+
+    // Lấy giá trị của hash
+    const hash = location.hash;
+    const hashValue = hash.substring(1);
     const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
@@ -20,21 +27,27 @@ const DetailBrandDesign = () => {
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto flex-col'>
-                        <div id='logodesigncoban' className='px-[15px] pb-[30px] pt-16 -mt-16'>
-                            <div className='-mb-[30px]'>
-                                <img className='w-full h-full object-cover' src={logoBasic} alt="" />
+                        {hashValue === 'logodesigncoban' &&
+                            <div id='logodesigncoban' className='px-[15px] pb-[30px] pt-16 -mt-16'>
+                                <div className='-mb-[30px]'>
+                                    <img className='w-full h-full object-cover' src={logoBasic} alt="" />
+                                </div>
                             </div>
-                        </div>
-                        <div id='logodesignnangcao' className='px-[15px] pb-[30px] pt-16 -mt-16'>
-                            <div className='-mb-[30px]'>
-                                <img className='w-full h-full object-cover' src={logoAdvanced} alt="" />
+                        }
+                        {hashValue === 'logodesignnangcao' &&
+                            <div id='logodesignnangcao' className='px-[15px] pb-[30px] pt-16 -mt-16'>
+                                <div className='-mb-[30px]'>
+                                    <img className='w-full h-full object-cover' src={logoAdvanced} alt="" />
+                                </div>
                             </div>
-                        </div>
-                        <div id='logodesigncaocap' className='px-[15px] pb-[30px] pt-16 -mt-16'>
-                            <div className=''>
-                                <img className='w-full h-full object-cover' src={logoPremium} alt="" />
+                        }
+                        {hashValue === 'logodesigncaocap' &&
+                            <div id='logodesigncaocap' className='px-[15px] pb-[30px] pt-16 -mt-16'>
+                                <div className=''>
+                                    <img className='w-full h-full object-cover' src={logoPremium} alt="" />
+                                </div>
                             </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </section>
@@ -43,10 +56,7 @@ const DetailBrandDesign = () => {
                 <div className='relative w-full'>
                     <div className='max-w-[1080px] mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
-                            <div className='w-2/3 mx-auto'>
-                                <br />
-                                <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-[#334862] text-center'>điều khoản chung</p>
-                            </div>
+                            <br />
                             <div className='font-roboto relative text-sm sm:text-base'>
                                 <div className='red-line' />
                                 <div className='mt-5 relative'>
@@ -110,7 +120,9 @@ const DetailBrandDesign = () => {
                     </div>
                 </div>
             </section>
-
+            <section className='flex bg-[#EDEDED]'>
+                <Pricing />
+            </section>
             <Footer />
         </div>
     )

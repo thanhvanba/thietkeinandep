@@ -1,0 +1,17 @@
+.product-item:hover .product-over {
+    display: block;
+    transform: scale(1.1);
+}
+
+.product-item {
+    overflow: hidden;
+}
+
+.product-over.hovered {
+    display: flex;
+    /* Hiển thị khi hovered */
+    transform: scale(1.1);
+    /* Kích thước lớn hơn khi hovered */
+    opacity: 1;
+    /* Hiển thị hoàn toàn khi hovered */
+}

@@ -3,6 +3,7 @@ import React from 'react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import "./footer.css"
 import { HashLink } from 'react-router-hash-link'
+import BluginContact from '../BluginContact'
 const Footer = () => {
     return (
         <footer className='w-full relative'>
@@ -38,7 +39,7 @@ const Footer = () => {
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Tin tức</span>
                                     </a>
-                                     <HashLink to='/#du-an' className='flex items-center leading-relaxed py-[4.8px]'>
+                                    <HashLink to='/#du-an' className='flex items-center leading-relaxed py-[4.8px]'>
                                         <ChevronRightIcon className='h-4 w-4' />
                                         <span className='pl-2 font-robotoSlab text-[16px]'>Các dự án đã thực hiện</span>
                                     </HashLink>
@@ -50,7 +51,7 @@ const Footer = () => {
                                 <div className='flex-col'>
                                     CTY TNHH TM DV GIẢI PHÁP HOME
                                     <br />
-                                    52/3 Thạnh Xuân 38,
+                                    52/3/1 Thạnh Xuân 38,
                                     P. Thạnh Xuân, Quận 12, Tp. HCM
                                     <br />
                                     Phone: 0906 260 488 (Zalo)
@@ -60,7 +61,7 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <div className='pt-[10px] pb-[15px] bg-[#5b5b5b] text-[#FFFFFF80]'>
+            <div className='flex justify-center pt-[10px] pb-[15px] bg-[#5b5b5b] text-[#FFFFFF80]'>
                 <div className='max-w-[1080px] mx-auto px-[15px] clearfix'>
                     <div className='font-lato text-center sm:float-left'>
                         <div className='text-[12.24px]'>
@@ -80,6 +81,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
+            <BluginContact />
         </footer>
     )
 }

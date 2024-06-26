@@ -1,0 +1,107 @@
+.alowebtot-nav {
+    position: fixed;
+    left: 56px;
+    z-index: 30;
+    bottom: 160px;
+    padding: 10px 0;
+}
+
+.alowebtot-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.alowebtot-nav ul li {
+    list-style: none !important;
+}
+
+.alowebtot-nav ul>li a {
+    border: none;
+    padding: 3px;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    max-width: 72.19px;
+    max-height: 54px;
+    text-decoration: none;
+}
+
+.alowebtot-nav ul>li a i.ticon-heart {
+    background: url(https://alowebtot.com/wp-content/uploads/2024/05/map-icon.png) no-repeat;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.alowebtot-nav ul>li a i.ticon-zalo-circle2 {
+    background: url('../../assets/img/Icon_of_Zalo.svg.png') no-repeat;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.alowebtot-nav ul>li a i {
+    width: 33px;
+    height: 33px;
+    display: block;
+    margin: auto;
+}
+
+.alowebtot-nav ul>li a i.ticon-messenger {
+    background: url('../../assets/img/facebook_icon.png') no-repeat;
+    background-size: contain;
+    width: 42px;
+    height: 42px;
+    display: block;
+}
+
+
+.alowebtot-nav ul>li a i.ticon-chat-sms {
+    background: url('../../assets/img/gmail_icon.png') no-repeat;
+    background-size: contain;
+    width: 34px;
+    height:34px;
+    display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .alowebtot-nav li .chat_animation {
+        display: block !Important
+    }
+
+    .alowebtot-nav ul>li a {
+        padding: 0;
+        margin: 0 auto
+    }
+
+    /* .alowebtot-nav {
+        background: white;
+        width: 100%;
+        border-radius: 0;
+        color: #fff;
+        height: 60px;
+        line-height: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        padding: 5px;
+        margin: 0;
+        box-shadow: 0 4px 10px 0 #000;
+    } */
+
+    .alowebtot-nav li {
+        float: left;
+        width: 20%;
+        list-style: none;
+        height: 50px;
+    }
+}

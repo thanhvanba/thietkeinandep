@@ -50,7 +50,7 @@ const App = () => {
                 open={open}
                 key={'left'}
                 width={280}
-                bodyStyle={{ padding: 0 }}
+                // bodyStyle={{ padding: 0 }}
                 style={{ background: '#FFFFFFF2' }}
             >
                 <ul className="relative text-center font-lato text-[16px] text-[#666] pt-5">

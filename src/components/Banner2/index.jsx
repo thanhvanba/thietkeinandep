@@ -1,4 +1,6 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Banner2({ titleArray = [], image, position, width, top, height }) {
     return (

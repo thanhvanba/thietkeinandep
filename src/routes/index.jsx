@@ -11,6 +11,7 @@ import DetailPrinting from "../page/DetailPrinting"
 import DetailProject from "../page/DetailProject"
 import News from '../page/News';
 import DetailNews from '../page/DetailNews';
+import Contact from '../page/Contact';
 
 const MainRouter = () => {
     return (
@@ -27,6 +28,7 @@ const MainRouter = () => {
                 <Route path='/du-an/:id' element={<DetailProject />} />
                 <Route path="/tin-tuc" element={<News />} />
                 <Route path="/tin-tuc/:slug" element={<DetailNews />} />
+                <Route path="/lien-he" element={<Contact />} />
             </Routes>
         </div>
     )

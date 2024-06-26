@@ -1,0 +1,19 @@
+/* Banner.css */
+.banner {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 0.3s;
+}
+
+.banner.fixed {
+    position: fixed;
+    top: 100px;
+    left: auto
+}
+
+.banner.hidden {
+    opacity: 0;
+    visibility: hidden;
+}  

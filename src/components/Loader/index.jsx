@@ -2,28 +2,28 @@ import React, { useEffect, useState } from 'react';
 import './index.css';
 
 const Loader = () => {
-    const [showPreloader, setShowPreloader] = useState(true);
+    // const [showPreloader, setShowPreloader] = useState(true);
 
-    useEffect(() => {
-        const hidePreloader = () => {
-            setShowPreloader(false);
-        };
+    // useEffect(() => {
+    //     const hidePreloader = () => {
+    //         setShowPreloader(false);
+    //     };
 
-        const timeout = setTimeout(hidePreloader, 1500); // Điều chỉnh thời gian trễ theo nhu cầu
+    //     const timeout = setTimeout(hidePreloader, 50000); // Điều chỉnh thời gian trễ theo nhu cầu
 
-        return () => clearTimeout(timeout);
-    }, []);
+    //     return () => clearTimeout(timeout);
+    // }, []);
 
-    // Bạn có thể sử dụng các chuyển tiếp hoặc hoạt hình CSS để kiểm soát hiệu ứng mờ dần
-    const preloaderStyle = {
-        opacity: showPreloader ? 1 : 0,
-        transition: "opacity 0.5s ease",
-        display: showPreloader ? "flex" : "none",
-    };
+    // // Bạn có thể sử dụng các chuyển tiếp hoặc hoạt hình CSS để kiểm soát hiệu ứng mờ dần
+    // const preloaderStyle = {
+    //     opacity: showPreloader ? 1 : 0,
+    //     transition: "opacity 0.5s ease",
+    //     display: "flex",
+    // };
 
     return (
-        <div className="cs_preloader" style={preloaderStyle}>
-            <div className="loader flex justify-center items-center h-screen w-full text-4xl bg-orange-50">
+        <div className="absolute top-0 bottom-0 right-0 left-0" >
+            <div className="loader flex justify-center items-center h-screen w-full text-2xl sm:text-4xl bg-orange-50 ">
                 <span className="l">L</span>
                 <span className="o">o</span>
                 <span className="a">a</span>
