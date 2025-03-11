@@ -43,7 +43,7 @@ function BluginContact() {
                         </Link>
                     </li>
                     <li className='relative flex justify-center items-center'>
-                        <Link href="https://www.facebook.com/thietkehome" rel="nofollow" target="_blank">
+                        <Link to="https://www.facebook.com/thietkehome" rel="nofollow" target="_blank">
                             <i className="ticon-messenger" />
                             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
                                 <div className="absolute -z-10 h-8 w-8 sm:w-10 sm:h-10 md:w-14 md:h-14 border-2 bg-black bg-opacity-10 rounded-full"></div>
@@ -55,7 +55,7 @@ function BluginContact() {
                         </Link>
                     </li>
                     <li className='relative flex justify-center items-center'>
-                        <Link className='' href="mailto:ndqlinh@gmail.com" rel="nofollow" target="_blank">
+                        <Link className='' to="mailto:ndqlinh@gmail.com" rel="nofollow" target="_blank">
                             <i className="ticon-chat-sms" />
                             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
                                 <div className="absolute -z-10 h-8 w-8 sm:w-10 sm:h-10 md:w-14 md:h-14 border-2 bg-black bg-opacity-10 rounded-full"></div>

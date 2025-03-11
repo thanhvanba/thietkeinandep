@@ -28,6 +28,8 @@ const MainRouter = () => {
                 <Route path="/bao-gia-thiet-ke-logo" element={<DetailBrandDesign />} />
                 <Route path="/bao-gia-thiet-ke-bao-bi" element={<DetailPackageDesign />} />
                 <Route path="/bao-gia-in-an-san-xuat" element={<DetailPrinting />} />
+                
+                <Route path="/san-xuat-in-an/:id" element={<DetailPrinting />} />
                 <Route path='/du-an/:id' element={<DetailProject />} />
                 <Route path="/tin-tuc" element={<News />} />
                 <Route path="/tin-tuc/:slug" element={<DetailNews />} />

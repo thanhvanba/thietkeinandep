@@ -22,7 +22,7 @@ const Loader = () => {
     // };
 
     return (
-        <div className="absolute top-0 bottom-0 right-0 left-0" >
+        <div className="absolute z-[999999] top-0 bottom-0 right-0 left-0" >
             <div className="loader flex justify-center items-center h-screen w-full text-2xl sm:text-4xl bg-orange-50 ">
                 <span className="l">L</span>
                 <span className="o">o</span>

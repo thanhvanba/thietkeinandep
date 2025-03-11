@@ -33,7 +33,7 @@ const Printing = () => {
                         <br />
                     </div>
                     <div className='max-w-7xl mx-auto flex flex-col sm:flex-row'>
-                        <HashLink to='/bao-gia-in-an-san-xuat/#innhanhkts' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/san-xuat-in-an/in-nhanh' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#FFFFFF"
                                 name="SẢN XUẤT IN ẤN cơ bản"
@@ -45,7 +45,7 @@ const Printing = () => {
                                 colText="#777"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-in-an-san-xuat/#offset' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/san-xuat-in-an/in-offset' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#446084"
                                 name="SẢN XUẤT IN ẤN nâng cao"
@@ -57,7 +57,7 @@ const Printing = () => {
                                 colText="#FFF"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-in-an-san-xuat/#posm' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/san-xuat-in-an/in-quang-cao' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#A29E9E"
                                 name="SẢN XUẤT IN ẤN cao cấp"

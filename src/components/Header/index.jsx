@@ -8,7 +8,7 @@ import logo from "../../assets/img/LOGO.png"
 import phone from "../../assets/img/phone-icon1.png"
 import fb from "../../assets/img/shipper.png"
 
-import ResponsiveMenu from '../ResponsiveMenu'
+import ResponsiveMenu from './responsiveMenu'
 import "./header.css"
 import { Facebook, Phone, Search, ShoppingCart } from 'lucide-react';
 import HeaderContent from './headerContent';

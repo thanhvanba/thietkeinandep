@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link'
 import logo from "../../assets/img/LOGO.png"
 import { Link } from 'react-router-dom';
 
-const App = () => {
+const ResponsiveMenu = () => {
     const [open, setOpen] = useState(false);
     const [show, setShow] = useState(false);
     const [showPrinting, setShowPrinting] = useState(false);
@@ -155,4 +155,4 @@ const App = () => {
         </>
     );
 };
-export default App;
+export default ResponsiveMenu;
