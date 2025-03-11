@@ -12,7 +12,7 @@ const Banner = ({ customPT, customClassName, customBg, customWidth, customTop, t
 
                     {/* Phần Nội dung chính */}
                     <div className='relative h-full'>
-                        <div className='relative max-w-[1080px] h-full bg-cover px-[15px] mx-auto'>
+                        <div className='relative max-w-7xl h-full bg-cover px-[15px] mx-auto'>
                             <div className='absolute top-0 bottom-0 right-0 left-0 h-full w-full' />
                             <div className={`absolute w-[44%] top-[${customTop}] left-[0%]`}>
                                 <p className=''>

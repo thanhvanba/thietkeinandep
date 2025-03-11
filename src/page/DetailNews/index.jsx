@@ -61,9 +61,9 @@ const DetailNews = () => {
     }, []);
     return (
         <div>
-            {loading ? <LoaderStyle2 />
+            {loading ? <Loader />
                 : <>
-                    <Header />
+                    {/* <Header /> */}
                     <Banner3 />
                     <div className='py-[30px]'>
                         <div className='max-w-[1320px] mx-auto flex-col sm:flex sm:flex-row'>
@@ -88,7 +88,7 @@ const DetailNews = () => {
                             </div>
                         </div>
                     </div>
-                    <Footer />
+                    {/* <Footer /> */}
                 </>
             }
         </div>

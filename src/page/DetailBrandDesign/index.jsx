@@ -20,13 +20,13 @@ const DetailBrandDesign = () => {
     const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', '  Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             {/* Banner */}
             {/* <Banner customPT="50%" customClassName="bg2" customBg="brandDesign" customWidth="44%" customTop="34%" titleArr={titleArray} /> */}
-            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="" top="34%" height="50%" />
+            <Banner2 titleArray={titleArray} imageId={163} position="0% 13%" width="" top="34%" height="50%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto flex-col'>
+                    <div className='max-w-7xl mx-auto flex-col'>
                         {hashValue === 'logodesigncoban' &&
                             <div id='logodesigncoban' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                                 <div className='-mb-[30px]'>
@@ -54,7 +54,7 @@ const DetailBrandDesign = () => {
 
             <section className='flex'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <br />
                             <div className='font-roboto relative text-sm sm:text-base'>
@@ -123,7 +123,7 @@ const DetailBrandDesign = () => {
             <section className='flex bg-[#EDEDED]'>
                 <Pricing />
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

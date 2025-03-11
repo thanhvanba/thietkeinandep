@@ -13,10 +13,10 @@ function Contact() {
     const navigate = useNavigate()
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <Banner2
                 titleArray={[]}
-                image="bg-news"
+                imageId={169}
                 position="0% 100%"
                 width=""
                 top=""
@@ -28,8 +28,8 @@ function Contact() {
                 </h2>
                 <div className='border-2 p-2 md:p-4 text-[10px] md:text-xl space-y-1 md:space-y-2'>
                     <h3 className='font-semibold font-lato flex items-center gap-x-2'>
-                        <img className='h-4 md:h-6' src={location} alt="" />
-                        <p>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ GIẢI PHÁP HOME</p>
+                        <img className='h-3 md:h-5 lg:h-6' src={location} alt="" />
+                        <p className=''>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ GIẢI PHÁP HOME</p>
                     </h3>
                     <p className='relative pl-10 md:pl-20 text-sx md:text-base font-lato'><span className='absolute top-0 left-0 text-[#334862]'>Địa chỉ:</span>52/3 Thạnh Xuân 38, P. Thạnh Xuân, Quận 12, Tp. HCM</p>
                     <p className='relative pl-10 md:pl-20 text-sx md:text-base font-lato'><span className='absolute top-0 left-0 text-[#334862]'>SĐT:</span> 0906 260 488</p>
@@ -70,7 +70,7 @@ function Contact() {
 
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

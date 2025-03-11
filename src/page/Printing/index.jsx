@@ -14,12 +14,12 @@ const Printing = () => {
     const titleArray = ['Printing', 'thổi hồn vào từng chiếc hộp mang', ' thương hiệu đến khách hàng'];
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             {/* Banner */}
-            <Banner2 titleArray={titleArray} image="bg-printing" position="0% 0%" width="" top="27%" height="52.25%" />
+            <Banner2 titleArray={titleArray} imageId={167} position="0% 0%" width="" top="27%" height="52.25%" />
             <section className='flex'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <ProcessWork />
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const Printing = () => {
                         <p className='font-alexandria uppercase text-[20px] sm:text-[20pt] text-[#334862] text-center'>Các gói dịch vụ</p>
                         <br />
                     </div>
-                    <div className='max-w-[1080px] mx-auto flex flex-col sm:flex-row'>
+                    <div className='max-w-7xl mx-auto flex flex-col sm:flex-row'>
                         <HashLink to='/bao-gia-in-an-san-xuat/#innhanhkts' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#FFFFFF"
@@ -75,7 +75,7 @@ const Printing = () => {
 
             <section className='flex'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <div className='w-1/2 mx-auto'>
                                 <br />
@@ -136,7 +136,7 @@ const Printing = () => {
 
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <div className='text-center pt-[15px]'>
                                 <div className='md:w-2/3 m-auto'>
@@ -151,7 +151,7 @@ const Printing = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

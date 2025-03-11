@@ -18,6 +18,7 @@ import './home.css'
 import { MinusIcon } from '@heroicons/react/20/solid';
 import Loader from '../../components/Loader';
 import LoaderStyle2 from '../../components/LoaderStyle2';
+import Title from '../../components/Title';
 const Home = () => {
   const titleArray = ['Chúng tôi cùng bạn tạo nên kết nối', 'từ thương hiệu đến khách hàng'];
 
@@ -50,28 +51,19 @@ const Home = () => {
     handleGetItem()
   }, [])
 
-  const [hoverIndex, setHoverIndex] = useState(-1);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setHoverIndex((prevIndex) => (prevIndex + 1) % projects.length);
-    }, 2000); // Chuyển đổi hiệu ứng hover mỗi 2 giây
-
-    return () => clearInterval(intervalId); // Dọn dẹp interval khi component unmount
-  }, [projects.length]);
   return (
     <div className='relative'>
-      {loading ? <LoaderStyle2 /> :
+      {loading ? <Loader /> :
         <>
-          <Header />
-          <Banner2 titleArray={titleArray} image="bg-header" position="0% 100%" width="" top="34%" height="50%" />
+          {/* <Header /> */}
+          <Banner2 titleArray={titleArray} imageId={160} position="0% 100%" width="" top="34%" height="50%" />
           {/* Dịch vụ */}
           <section className='flex bg-[#CECECE]'>
             <div className='relative w-full'>
-              <div className='max-w-[1080px] mx-auto flex flex-col sm:flex-row h-full'>
+              <div className='max-w-7xl mx-auto flex flex-col md:grid grid-cols-2 lg:grid-cols-4 h-full'>
                 {
-                  services.slice().reverse().map((service) => (
-                    <Link to={`/${service.slug}`} className='sm:w-1/3 px-[15px] pb-[30px] h-full z-10'>
+                  services.slice().map((service) => (
+                    <Link to={`/${service.slug}`} className='w-full px-[15px] pb-[30px] h-full z-10'>
                       <ServicesComponent
                         colBg={service.acf.colbg}
                         name={service.acf.title_viet}
@@ -85,6 +77,18 @@ const Home = () => {
                     </Link>
                   ))
                 }
+                <Link to={`/thiet-ke-quang-cao`} className='w-full px-[15px] pb-[30px] h-full z-10'>
+                  <ServicesComponent
+                    colBg={'D6E4FF'}
+                    name={'Thiết Kế Quảng Cáo'}
+                    colName={'#FFFFFF'}
+                    nameE={'Advertising Design'}
+                    colNameE={'#0F3659'}
+                    text1={'Nâng tầm thương hiệu với thiết kế quảng cáo sáng tạo'}
+                    text2={'thu hút mọi ánh nhìn!'}
+                    colText={'#333333'}
+                  />
+                </Link>
               </div>
             </div>
 
@@ -93,17 +97,9 @@ const Home = () => {
           {/* Dự án đã làm */}
           <section className='flex bg-[#CECECE]' >
             <div id='du-an' className='relative w-full pt-24 -mt-24'>
+              <Title text={'Các dự án đã thực hiện'}></Title>
               <div className=''>
-                <div className='relative px-[15px] pb-[30px]'>
-                  <div className='md:w-3/5 m-auto'>
-                    <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-black text-center'>
-                      CÁC DỰ ÁN ĐÃ THỰC HIỆN
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className='max-w-[1065px] mx-auto '>
-                <div className='grid sm:grid-cols-3 pb-5'>
+                {/* <div className='grid sm:grid-cols-3 pb-5'>
                   {
                     projects.map((project, index) => (
                       <Link to={`/du-an/${project.slug}`} className='px-[10px] pb-[30px]'>
@@ -116,6 +112,21 @@ const Home = () => {
                       </Link>
                     ))
                   }
+                </div> */}
+                <div>
+                  <ProjectComponent products={projects.slice(0, 6)} />
+                  {/* Nút Xem Thêm */}
+                  <div className="text-center mb-4">
+                    <Link
+                      to="/du-an"
+                      className="text-sky-900 text-lg font-semibold hover:text-sky-950 transition-all duration-300 flex items-center justify-center gap-2 group"
+                    >
+                      Xem thêm
+                      <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                        ➝
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,12 +135,10 @@ const Home = () => {
           {/* logoKH */}
           < section className='flex' >
             <div className='relative w-full'>
-              <div className='max-w-[1080px] mx-auto'>
+              <div className='max-w-7xl mx-auto'>
                 <div className='px-[15px] pb-[30px]'>
                   <div className='text-center pt-[15px]'>
-                    <div className='md:w-2/3 m-auto'>
-                      <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-black text-center'>CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI !</p>
-                    </div>
+                    <Title text={'cảm ơn đã lựa chọn chúng tôi'}></Title>
                     <div className=''>
                       <img className='w-full h-full object-cover' src={logoKH} alt="" />
                     </div>
@@ -149,7 +158,7 @@ const Home = () => {
 
           {/* Tin tức */}
           <section >
-            <div className='flex mt-[30px] max-w-[1080px] mx-auto w-full'>
+            <div className='flex mt-[30px] max-w-7xl mx-auto w-full'>
               <div className='relative px-[15px] pb-[30px] w-full'>
                 <div className='border-[1.5px] sm:border-dashed flex justify-center items-start bg-[#CECECE] flex-col sm:flex-row'>
                   {news1.map((post) => (
@@ -188,7 +197,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className='flex max-w-[1080px] mx-auto w-full'>
+            <div className='flex max-w-7xl mx-auto w-full'>
               <div className='relative px-[15px] pb-[30px] w-full'>
                 <div className='flex place-items-start'>
                   {news2.map((post) => (
@@ -224,7 +233,7 @@ const Home = () => {
               </div>
             </div>
           </section >
-          <Footer />
+          {/* <Footer /> */}
         </>
       }
     </div >

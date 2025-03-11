@@ -6,12 +6,12 @@ import { DiamondIcon } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiamond } from '@fortawesome/free-solid-svg-icons';
 
-export default function DropDown() {
+export default function DropDown_Inan() {
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button className={`flex text-[12.8px]/[16px] font-bold font-robotoSlab uppercase py-2`}>
-                    Dịch vụ
+                    In ấn
                     <ChevronDownIcon
                         className='h-4 w-4'
                         aria-hidden="true"
@@ -33,8 +33,8 @@ export default function DropDown() {
                         <FontAwesomeIcon className='text-white absolute -top-2 left-4' icon={faDiamond} />
                         <Menu.Item>
                             {({ active }) => (
-                                <Link to="/thiet-ke-thuong-hieu" className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'>
-                                    Thiết kế thương hiệu
+                                <Link to="/san-xuat-in-an/in-nhanh" className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'>
+                                    In nhanh
                                 </Link>
                             )}
                         </Menu.Item>
@@ -42,8 +42,8 @@ export default function DropDown() {
                     <div className="py-1">
                         <Menu.Item>
                             {({ active }) => (
-                                <Link to="/thiet-ke-bao-bi" className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'>
-                                    Thiết kế bao bì
+                                <Link to="/san-xuat-in-an/in-offset" className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'>
+                                    In offset
                                 </Link>
                             )}
                         </Menu.Item>
@@ -51,8 +51,8 @@ export default function DropDown() {
                     <div className="py-1">
                         <Menu.Item>
                             {({ active }) => (
-                                <Link to="/san-xuat-in-an" className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'>
-                                    In ấn sản xuất
+                                <Link to="/san-xuat-in-an/in-quang-cao" className='font-robotoSlab text-base text-[#666666D9] block px-4 py-2'>
+                                    In quảng cáo
                                 </Link>
                             )}
                         </Menu.Item>

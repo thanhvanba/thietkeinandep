@@ -3,7 +3,7 @@
 }
 
 .option-style:hover {
-    color: rgba(17, 17, 17, .85);
+    color: rgb(217 119 6);
 }
 
 .active {
@@ -13,8 +13,6 @@
 .scrolled {
     position: fixed;
     background-color: #d3d3d3;
-    z-index: 30;
-    height: 70px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
     transform: translateY(-150%)
 }

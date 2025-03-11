@@ -25,8 +25,13 @@ const Apiservice = () => {
             "https://thietkeinandep.annk.info/api/wp-json/wp/v2/posts?_fields=id,content,link,title,acf,excerpt,slug&slug";
         return await axios.get(apiURL)
     }
+    const getOneBannerApi = async (bannerId) => {
+        let apiURL =
+            `https://thietkeinandep.annk.info/api/wp-json/wp/v2/media/${bannerId}`;
+        return await axios.get(apiURL)
+    }
     return {
-        projectApi, infoApi, serviceApi, newsApi
+        projectApi, infoApi, serviceApi, newsApi, getOneBannerApi
     }
 }
 

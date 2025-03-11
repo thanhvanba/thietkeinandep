@@ -32,7 +32,7 @@
 }
 
 .alowebtot-nav ul>li a i.ticon-heart {
-    background: url(https://alowebtot.com/wp-content/uploads/2024/05/map-icon.png) no-repeat;
+    background: url('../../assets/img/ggmap-icon.png') no-repeat;
     background-size: contain;
     width: 36px;
     height: 36px;

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HashLink } from 'react-router-hash-link';
 
 import Header from '../../components/Header'
@@ -8,16 +7,16 @@ import ServicesComponent from '../../components/ServicesComponent';
 import logoKH from "../../assets/img/LOGO-KHACH-HANG.png"
 
 import Banner from '../../components/Banner';
-import './PackageDesign.css'
+import './brandDesign.css'
 import Banner2 from '../../components/Banner2';
 import ProcessWork from '../../components/ProcessWork';
-const PackageDesign = () => {
-    const titleArray = ['Packing Design', 'thổi hồn vào từng chiếc hộp mang', 'thương hiệu đến khách hàng'];
+const LogoDesign = () => {
+    const titleArray = ['Brand Design', 'Logo là gương mặt của thương hiệu', 'Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
             {/* <Header /> */}
             {/* Banner */}
-            <Banner2 titleArray={titleArray} imageId={165} position="0% 10%" width="" top="34%" height="56.25%" />
+            <Banner2 titleArray={titleArray} imageId={163} position="0% 13%" width="" top="34%" height="50%" />
             <section className='flex'>
                 <div className='relative w-full'>
                     <div className='max-w-7xl mx-auto'>
@@ -34,45 +33,45 @@ const PackageDesign = () => {
                         <br />
                     </div>
                     <div className='max-w-7xl mx-auto flex flex-col sm:flex-row'>
-                        <HashLink to='/bao-gia-thiet-ke-bao-bi/#packingdesigncoban' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/bao-gia-thiet-ke-logo/#logodesigncoban' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#FFFFFF"
-                                name="THIẾT KẾ BAO BÌ cơ bản"
+                                name="Thiết kế thương hiệu cơ bản"
                                 colName="#555"
                                 nameE="Basic"
                                 colNameE="#334862"
-                                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-                                text2="Tối ưu quy trình đóng gói."
+                                text1="Thiết kế LOGO, bộ nhận diện thương hiệu"
+                                text2="Catalogue, hồ sơ năng lực."
                                 colText="#777"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-thiet-ke-bao-bi/#packingdesignnangcao' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/bao-gia-thiet-ke-logo/#logodesignnangcao' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#446084"
-                                name="THIẾT KẾ BAO BÌ nâng cao"
+                                name="Thiết kế thương hiệu nâng cao"
                                 colName="#FFFFFF"
                                 nameE="advanced"
                                 colNameE="#FFF"
-                                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-                                text2="Tối ưu quy trình đóng gói."
+                                text1="Thiết kế LOGO, bộ nhận diện thương hiệu"
+                                text2="Catalogue, hồ sơ năng lực."
                                 colText="#FFF"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-thiet-ke-bao-bi/#packingdesigncaocap' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/bao-gia-thiet-ke-logo/#logodesigncaocap' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#A29E9E"
-                                name="THIẾT KẾ BAO BÌ cao cấp"
+                                name="Thiết kế thương hiệu cao cấp"
                                 colName="#fff"
                                 nameE="premium"
                                 colNameE="#334862"
-                                text1="Thiết kế đa dạng hộp giấy, tem nhãn, túi."
-                                text2="Tối ưu quy trình đóng gói."
+                                text1="Thiết kế LOGO, bộ nhận diện thương hiệu"
+                                text2="Catalogue, hồ sơ năng lực."
                                 colText="#FFF"
                             />
                         </HashLink>
                     </div>
                 </div>
-            </section>
+            </section >
 
             <section className='flex'>
                 <div className='relative w-full'>
@@ -153,8 +152,8 @@ const PackageDesign = () => {
                 </div>
             </section>
             {/* <Footer /> */}
-        </div>
+        </div >
     )
 }
 
-export default PackageDesign
+export default LogoDesign

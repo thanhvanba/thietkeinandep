@@ -10,10 +10,14 @@ import { Link } from 'react-router-dom';
 const App = () => {
     const [open, setOpen] = useState(false);
     const [show, setShow] = useState(false);
+    const [showPrinting, setShowPrinting] = useState(false);
     const [showButton, setShowButton] = useState(false);
 
     const showService = () => {
         setShow(!show)
+    }
+    const handleShowPrinting = () => {
+        setShowPrinting(!showPrinting)
     }
     const showDrawer = () => {
         setOpen(true);
@@ -68,6 +72,29 @@ const App = () => {
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px]">
                         <div className='flex flex-row font-extrabold uppercase text-black items-center'>
                             <div className='pl-5 py-[15px] flex flex-grow'>
+                                <p onClick={handleShowPrinting} >In ấn</p>
+                            </div>
+                            <div className='w-11 h-10 relative'>
+                                <ChevronUpDownIcon onClick={handleShowPrinting} className='w-6 h-6 absolute top-1 left-2 font-normal' />
+                            </div>
+                        </div>
+
+                        <ul className={`${showPrinting ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
+                            <li className="pl-2">
+                                <Link to="/san-xuat-in-an/in-nhanh" className='pl-5 py-[5px] flex'>In nhanh</Link>
+                            </li>
+                            <li className="pl-2">
+                                <Link to="/san-xuat-in-an/in-offset" className='pl-5 py-[5px] flex'>In offset</Link>
+                            </li>
+                            <li className="pl-2">
+                                <Link to="/san-xuat-in-an/in-quang-cao" className='pl-5 py-[5px] flex'>In quảng cáo</Link>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px]">
+                        <div className='flex flex-row font-extrabold uppercase text-black items-center'>
+                            <div className='pl-5 py-[15px] flex flex-grow'>
                                 <p onClick={showService} >Dịch vụ</p>
                             </div>
                             <div className='w-11 h-10 relative'>
@@ -77,13 +104,13 @@ const App = () => {
 
                         <ul className={`${show ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
                             <li className="pl-2">
-                                <Link to="/thiet-ke-thuong-hieu" className='pl-5 py-[5px] flex'>Thiết kế thương hiệu</Link>
+                                <Link to="/thiet-ke-logo" className='pl-5 py-[5px] flex'>Thiết kế logo</Link>
                             </li>
                             <li className="pl-2">
                                 <Link to="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</Link>
                             </li>
                             <li className="pl-2">
-                                <Link to="/san-xuat-in-an" className='pl-5 py-[5px] flex'>In ấn sản xuất</Link>
+                                <Link to="/thiet-ke-quang-cao" className='pl-5 py-[5px] flex'>Thiết kế quảng cáo</Link>
                             </li>
                         </ul>
 

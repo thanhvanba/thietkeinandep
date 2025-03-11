@@ -10,16 +10,16 @@ import Banner from '../../components/Banner';
 import './brandDesign.css'
 import Banner2 from '../../components/Banner2';
 import ProcessWork from '../../components/ProcessWork';
-const BrandDesign = () => {
-    const titleArray = ['Brand Design', ' Logo là gương mặt của thương hiệu', 'Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
+const AdvertisingDesign = () => {
+    const titleArray = ['Brand Design', 'Logo là gương mặt của thương hiệu', 'Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             {/* Banner */}
-            <Banner2 titleArray={titleArray} image="bg-brandDesign" position="0% 13%" width="" top="34%" height="50%" />
+            <Banner2 titleArray={titleArray} imageId={163} position="0% 13%" width="" top="34%" height="50%" />
             <section className='flex'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <ProcessWork />
                     </div>
                 </div>
@@ -32,8 +32,8 @@ const BrandDesign = () => {
                         <p className='font-alexandria uppercase text-[20px] sm:text-[20pt] text-[#334862] text-center'>Các gói dịch vụ</p>
                         <br />
                     </div>
-                    <div className='max-w-[1080px] mx-auto flex flex-col sm:flex-row'>
-                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesigncoban' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                    <div className='max-w-7xl mx-auto flex flex-col sm:flex-row'>
+                        <HashLink to='/bao-gia-thiet-ke-logo/#logodesigncoban' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#FFFFFF"
                                 name="Thiết kế thương hiệu cơ bản"
@@ -45,7 +45,7 @@ const BrandDesign = () => {
                                 colText="#777"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesignnangcao' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/bao-gia-thiet-ke-logo/#logodesignnangcao' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#446084"
                                 name="Thiết kế thương hiệu nâng cao"
@@ -57,7 +57,7 @@ const BrandDesign = () => {
                                 colText="#FFF"
                             />
                         </HashLink>
-                        <HashLink to='/bao-gia-thiet-ke-thuong-hieu/#logodesigncaocap' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
+                        <HashLink to='/bao-gia-thiet-ke-logo/#logodesigncaocap' className='sm:w-1/3 px-5 sm:px-2 md:px-[15px] pb-[30px]'>
                             <ServicesComponent
                                 colBg="#A29E9E"
                                 name="Thiết kế thương hiệu cao cấp"
@@ -75,7 +75,7 @@ const BrandDesign = () => {
 
             <section className='flex'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <div className='w-1/2 mx-auto'>
                                 <br />
@@ -136,7 +136,7 @@ const BrandDesign = () => {
 
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <div className='text-center pt-[15px]'>
                                 <div className='md:w-2/3 m-auto'>
@@ -151,9 +151,9 @@ const BrandDesign = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div >
     )
 }
 
-export default BrandDesign
+export default AdvertisingDesign

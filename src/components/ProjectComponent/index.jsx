@@ -1,20 +1,78 @@
-import React from 'react'
-import './index.css'
+import React, { useEffect, useState } from "react";
+import "./index.css";
+import { Link } from "react-router-dom";
+import DetailProject from "../../page/DetailProject";
+import Apiservice from "../../service/apiservice";
 
-const ProjectComponent = ({ title, name, img, isHovered }) => {
-    return (
-        <div className='product-item w-full h-60 bg-white p-0.5 rounded-md'>
-            <div className='relative text-[#f1f1f1] hover:text-slate-400 rounded-lg overflow-hidden'>
-                <div className={`product-over ${isHovered ? 'hovered' : ''}`}>
-                    <img className='w-full h-[235px] object-cover' src={img} alt="" />
-                </div>
-                <div className='w-full absolute bottom-0 pt-[0.63em] pb-[1.26em] px-[1.35em] text-center'>
-                    <h4 className='my-[0.1em]'>{title}</h4>
-                    <p className='my-[0.1em] uppercase'>{name}</p>
-                </div>
+const ProjectComponent = ({ products }) => {
+  console.log("🚀 ~ ProjectComponent ~ products:", products)
+  const { projectApi } = Apiservice()
+  const [project, setProject] = useState({})
+  const [request, setRequest] = useState([])
+
+  const handleGetItem = async (slug) => {
+    let resProject = await projectApi()
+
+    if (resProject && resProject.data) {
+      const foundProject = resProject.data.find((project) => project.slug === slug);
+      setRequest(foundProject.acf.request.split('-').filter(item => item.trim() !== ''))
+      setProject(foundProject || {});
+    }
+  }
+
+  const handleSelectProduct = (slug) => {
+    setVisible(false); // Đóng modal trước
+    setTimeout(() => {
+      setSelectedId(slug); // Cập nhật sản phẩm mới
+      setVisible(true); // Mở lại modal
+    }, 300);
+  };
+  const [visible, setVisible] = useState(false);
+  const [selectedId, setSelectedId] = useState('');
+  console.log("🚀 ~ ProjectComponent ~ selectedId:", selectedId)
+
+  useEffect(() => {
+    console.log('render')
+    if (selectedId !== '') {
+      console.log('render1')
+      handleGetItem(selectedId)
+      setVisible(true)
+    }
+  }, [selectedId])
+  return (
+    <div className="p-4">
+      {/* Grid sản phẩm */}
+      <div className="grid gap-4 
+                      grid-cols-1 
+                      sm:grid-cols-2 
+                      lg:grid-cols-3 
+                      auto-rows-[250px] sm:auto-rows-[300px] lg:auto-rows-[400px]">
+        {products.map((product, index) => (
+          <div
+            key={product.id}
+            // to={`/du-an/${product.slug}`}
+            onClick={() => setSelectedId(product.slug)}
+            className={`relative overflow-hidden rounded-sm group cursor-pointer block 
+              ${index % 6 === 0 || index % 6 === 4 ? "lg:row-span-2 lg:col-span-2" : ""}`}
+          >
+            {/* Hình ảnh */}
+            <img
+              src={product.acf.img_home}
+              alt={product.acf.project_name}
+              className="w-full h-full object-cover"
+            />
+
+            {/* Overlay hiển thị thông tin khi hover */}
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold">{product.acf.project_name}</h3>
+              <p className="text-xs sm:text-sm lg:text-base">{product.acf.services}</p>
             </div>
-        </div>
-    )
-}
+          </div>
+        ))}
+      </div>
+      <DetailProject visible={visible} onClose={() => setVisible(false)} listProject={products} project={project} request={request} onSelectProduct={handleSelectProduct} />
+    </div>
+  );
+};
 
-export default ProjectComponent
+export default ProjectComponent;

@@ -54,7 +54,7 @@ const Admin = () => {
 
                                 <ul className={`${show ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
                                     <li className="pl-2">
-                                        <a href="/thiet-ke-thuong-hieu" className='pl-5 py-[5px] flex'>Tất cả dự án</a>
+                                        <a href="/thiet-ke-logo" className='pl-5 py-[5px] flex'>Tất cả dự án</a>
                                     </li>
                                     <li className="pl-2">
                                         <a href="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thêm dự án</a>
@@ -74,7 +74,7 @@ const Admin = () => {
 
                                 <ul className={`${show ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
                                     <li className="pl-2">
-                                        <a href="/thiet-ke-thuong-hieu" className='pl-5 py-[5px] flex'>Thiết kế thương hiệu</a>
+                                        <a href="/thiet-ke-logo" className='pl-5 py-[5px] flex'>Thiết kế thương hiệu</a>
                                     </li>
                                     <li className="pl-2">
                                         <a href="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</a>

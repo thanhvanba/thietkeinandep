@@ -20,12 +20,12 @@ const DetailPrinting = () => {
     const titleArray = ['Printing', 'thổi hồn vào từng chiếc hộp mang', ' thương hiệu đến khách hàng'];
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             {/* Banner */}
-            <Banner2 titleArray={titleArray} image="bg-printing" position="0% 0%" width="" top="27%" height="52.25%" />
+            <Banner2 titleArray={titleArray} imageId={167} position="0% 0%" width="" top="27%" height="52.25%" />
             <section className='flex bg-[#EDEDED]'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto flex-col'>
+                    <div className='max-w-7xl mx-auto flex-col'>
                         {hashValue === 'innhanhkts' &&
                             <div id='innhanhkts' className='px-[15px] pb-[30px] pt-16 -mt-16'>
                                 <div className='-mb-[30px]'>
@@ -53,7 +53,7 @@ const DetailPrinting = () => {
 
             <section className='flex'>
                 <div className='relative w-full'>
-                    <div className='max-w-[1080px] mx-auto'>
+                    <div className='max-w-7xl mx-auto'>
                         <div className='px-[15px] pb-[30px]'>
                             <br />
                             <div className='font-roboto relative text-sm sm:text-base'>
@@ -122,7 +122,7 @@ const DetailPrinting = () => {
             <section className='flex bg-[#EDEDED]'>
                 <Pricing />
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
