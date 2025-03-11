@@ -3,7 +3,8 @@ import { Button, Drawer } from 'antd';
 import { Bars3Icon, XMarkIcon, ChevronUpDownIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 import { FacebookIcon, Instagram, Twitter, Mail } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link'
-
+import phone from "../../assets/img/phone-icon1.png"
+import fb from "../../assets/img/iconfb2.png"
 import logo from "../../assets/img/LOGO.png"
 import { Link } from 'react-router-dom';
 
@@ -65,13 +66,13 @@ const ResponsiveMenu = () => {
                         </Link>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
-                        <div className='pl-5 py-[15px] flex '>
+                        <div className='py-[15px] flex '>
                             <Link to="/">Trang chủ</Link>
                         </div>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px]">
                         <div className='flex flex-row font-extrabold uppercase text-black items-center'>
-                            <div className='pl-5 py-[15px] flex flex-grow'>
+                            <div className='py-[15px] flex flex-grow'>
                                 <p onClick={handleShowPrinting} >In ấn</p>
                             </div>
                             <div className='w-11 h-10 relative'>
@@ -81,20 +82,20 @@ const ResponsiveMenu = () => {
 
                         <ul className={`${showPrinting ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
                             <li className="pl-2">
-                                <Link to="/san-xuat-in-an/in-nhanh" className='pl-5 py-[5px] flex'>In nhanh</Link>
+                                <Link to="/san-xuat-in-an/in-nhanh" className='py-[5px] flex'>In nhanh</Link>
                             </li>
                             <li className="pl-2">
-                                <Link to="/san-xuat-in-an/in-offset" className='pl-5 py-[5px] flex'>In offset</Link>
+                                <Link to="/san-xuat-in-an/in-offset" className='py-[5px] flex'>In offset</Link>
                             </li>
                             <li className="pl-2">
-                                <Link to="/san-xuat-in-an/in-quang-cao" className='pl-5 py-[5px] flex'>In quảng cáo</Link>
+                                <Link to="/san-xuat-in-an/in-quang-cao" className='py-[5px] flex'>In quảng cáo</Link>
                             </li>
                         </ul>
 
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px]">
                         <div className='flex flex-row font-extrabold uppercase text-black items-center'>
-                            <div className='pl-5 py-[15px] flex flex-grow'>
+                            <div className='py-[15px] flex flex-grow'>
                                 <p onClick={showService} >Dịch vụ</p>
                             </div>
                             <div className='w-11 h-10 relative'>
@@ -104,37 +105,46 @@ const ResponsiveMenu = () => {
 
                         <ul className={`${show ? '' : 'hidden'} font-lato text-[16px] pb-[30px]`}>
                             <li className="pl-2">
-                                <Link to="/thiet-ke-logo" className='pl-5 py-[5px] flex'>Thiết kế logo</Link>
+                                <Link to="/thiet-ke-logo" className='py-[5px] flex'>Thiết kế logo</Link>
                             </li>
                             <li className="pl-2">
-                                <Link to="/thiet-ke-bao-bi" className='pl-5 py-[5px] flex'>Thiết kế bao bì</Link>
+                                <Link to="/thiet-ke-bao-bi" className='py-[5px] flex'>Thiết kế bao bì</Link>
                             </li>
                             <li className="pl-2">
-                                <Link to="/thiet-ke-quang-cao" className='pl-5 py-[5px] flex'>Thiết kế quảng cáo</Link>
+                                <Link to="/thiet-ke-quang-cao" className='py-[5px] flex'>Thiết kế quảng cáo</Link>
                             </li>
                         </ul>
 
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
-                        <div className='pl-5 py-[15px]  flex'>
+                        <div className='py-[15px]  flex'>
                             <Link to="/tin-tuc">Tin tức</Link>
                         </div>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
-                        <div className='pl-5 py-[15px] flex'>
-                            <HashLink to='/du-an/#du-an'>
+                        <div className='py-[15px] flex'>
+                            <HashLink to='/du-an'>
                                 <p href="">Dự án</p>
                             </HashLink>
                         </div>
                     </li>
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
-                        <div className='pl-5 py-[15px] flex'>
-                        <Link to="/lien-he">Liên hệ</Link>
+                        <div className='py-[15px] flex'>
+                            <Link to="/lien-he">Liên hệ</Link>
                         </div>
                     </li>
+                    <div className={`items-center flex space-x-3`}>
+                        <Link href="/contact" className="flex items-center">
+                            <img className="h-10 w-10" src={phone} alt="" />
+                        </Link>
+
+                        <Link href="/cart" className="relative">
+                            <img className="h-10 w-10 text-neutral-300" src={fb} alt="" />
+                        </Link>
+                    </div>
                     {/* WooCommerce not Found
                     <li className="border-t-[0.8px] w-full font-robotoSlab text-[12.8px] font-extrabold uppercase text-black">
-                        <div className='pl-5 py-[15px]  flex'>
+                        <div className='py-[15px]  flex'>
                             <a href="#header-newsletter-signup" className="tooltip" title="Sign up for Newsletter">
                                 <i className="icon-envelop"></i>
                                 <span className="header-newsletter-title flex items-center"><EnvelopeIcon className='h-5 w-5 mr-1' />Newsletter</span>
@@ -143,7 +153,7 @@ const ResponsiveMenu = () => {
 
                     </li>
                     <li className="border-t-[0.8px] w-full">
-                        <div className='pl-5 py-[15px]  flex'>
+                        <div className='py-[15px]  flex'>
                             <FacebookIcon className='h-4 w-4 mx-1' />
                             <Instagram className='h-4 w-4 mx-1' />
                             <Twitter className='h-4 w-4 mx-1' />

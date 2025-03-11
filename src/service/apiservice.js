@@ -27,7 +27,7 @@ const Apiservice = () => {
     }
     const getOneBannerApi = async (bannerId) => {
         let apiURL =
-            `https://thietkeinandep.annk.info/api/wp-json/wp/v2/media/${bannerId}`;
+            `https://thietkeinandep.annk.info/api/wp-json/wp/v2/media/${bannerId}?_fields=link`;
         return await axios.get(apiURL)
     }
     return {

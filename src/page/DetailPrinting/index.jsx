@@ -240,7 +240,9 @@ const DetailPrinting = () => {
                     </div>
                 </div>
             </section>
-            <List_Client />
+            <section className='bg-[#EDEDED] -mb-20'>
+                <List_Client />
+            </section>
             {/* <Footer /> */}
         </div>
     )

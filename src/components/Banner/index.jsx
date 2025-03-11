@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CustomBanner = () => {
     return (
         <div
-            className="w-full py-10 px-8 my-8 rounded-lg border border-primary/20 relative overflow-hidden"
+            className="w-full py-10 px-8 my-3 rounded-lg border border-primary/20 relative overflow-hidden"
             style={{
                 backgroundImage: `url(${bg})`,
                 backgroundSize: "cover",

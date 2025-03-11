@@ -18,14 +18,15 @@ const ProjectComponent = ({ products }) => {
       setRequest(foundProject.acf.request.split('-').filter(item => item.trim() !== ''))
       setProject(foundProject || {});
     }
+
+    setVisible(true)
   }
 
   const handleSelectProduct = (slug) => {
     setVisible(false); // Đóng modal trước
     setTimeout(() => {
       setSelectedId(slug); // Cập nhật sản phẩm mới
-      setVisible(true); // Mở lại modal
-    }, 300);
+    }, 100);
   };
   const [visible, setVisible] = useState(false);
   const [selectedId, setSelectedId] = useState('');
@@ -36,7 +37,6 @@ const ProjectComponent = ({ products }) => {
     if (selectedId !== '') {
       console.log('render1')
       handleGetItem(selectedId)
-      setVisible(true)
     }
   }, [selectedId])
   return (
@@ -57,6 +57,7 @@ const ProjectComponent = ({ products }) => {
           >
             {/* Hình ảnh */}
             <img
+              loading="lazy"
               src={product.acf.img_home}
               alt={product.acf.project_name}
               className="w-full h-full object-cover"

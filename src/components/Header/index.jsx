@@ -6,7 +6,7 @@ import { useSpring, animated } from 'react-spring';
 
 import logo from "../../assets/img/LOGO.png"
 import phone from "../../assets/img/phone-icon1.png"
-import fb from "../../assets/img/shipper.png"
+import fb from "../../assets/img/iconfb2.png"
 
 import ResponsiveMenu from './responsiveMenu'
 import "./header.css"

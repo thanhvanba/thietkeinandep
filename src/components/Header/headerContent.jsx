@@ -75,7 +75,7 @@ export default function HeaderContent({ currentTab }) {
 
   return (
     <div className="hidden md:block">
-      <ul className="flex space-x-4">
+      <ul className="flex space-x-6">
         {navItems.map((item) => (
           <li
             key={item.name}

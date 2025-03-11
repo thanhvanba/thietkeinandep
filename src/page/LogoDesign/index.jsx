@@ -10,6 +10,7 @@ import Banner from '../../components/Banner';
 import './brandDesign.css'
 import Banner2 from '../../components/Banner2';
 import ProcessWork from '../../components/ProcessWork';
+import List_Client from '../../components/List_Client';
 const LogoDesign = () => {
     const titleArray = ['Brand Design', 'Logo là gương mặt của thương hiệu', 'Chúng tôi mang một biểu tượng nhỏ, giúp bạn', 'ghi dấu vào trái tim khách hàng.'];
     return (
@@ -25,7 +26,8 @@ const LogoDesign = () => {
                 </div>
             </section>
 
-            <section className='flex bg-[#CECECE]'>
+            <Banner />
+            {/* <section className='flex bg-[#CECECE]'>
                 <div className='relative w-full'>
                     <div className='w-1/2 mx-auto'>
                         <br />
@@ -71,7 +73,7 @@ const LogoDesign = () => {
                         </HashLink>
                     </div>
                 </div>
-            </section >
+            </section > */}
 
             <section className='flex'>
                 <div className='relative w-full'>
@@ -134,22 +136,8 @@ const LogoDesign = () => {
                 </div>
             </section>
 
-            <section className='flex bg-[#EDEDED]'>
-                <div className='relative w-full'>
-                    <div className='max-w-7xl mx-auto'>
-                        <div className='px-[15px] pb-[30px]'>
-                            <div className='text-center pt-[15px]'>
-                                <div className='md:w-2/3 m-auto'>
-                                    <p className='font-alexandria uppercase text-[20px] sm:text-[25pt] text-black text-center'>CẢM ƠN BẠN ĐÃ LỰA CHỌN CHÚNG TÔI !</p>
-                                </div>
-                                <div className='-mb-20'>
-                                    <img className='w-full h-full object-cover' src={logoKH} alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <section className='bg-[#EDEDED] -mb-20'>
+                <List_Client />
             </section>
             {/* <Footer /> */}
         </div >
