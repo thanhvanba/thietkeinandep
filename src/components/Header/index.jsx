@@ -37,6 +37,7 @@ const Header = () => {
             case "/lien-he":
                 setCurrentTab("4")
                 break;
+            case "/san-xuat-in-an":
             case "/san-xuat-in-an/in-nhanh":
             case "/san-xuat-in-an/in-offset":
             case "/san-xuat-in-an/in-quang-cao":
