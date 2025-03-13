@@ -50,7 +50,7 @@ const DetailProject = ({ visible, onClose, listProject, project, request, onSele
                     <div className='relative w-full'>
                         <div className='max-w-7xl mx-auto'>
                             <div className='px-[15px] pb-[30px]'>
-                                {
+                                {/* {
                                     project && <div className='font-roboto relative text-sm sm:text-base'>
                                         <div className='red-line' />
                                         <div className='mt-5 relative'>
@@ -102,7 +102,7 @@ const DetailProject = ({ visible, onClose, listProject, project, request, onSele
                                             <div className='white-line' />
                                         </div>
                                     </div>
-                                }
+                                } */}
                                 <div className='text-sm sm:text-base'> {project && project.content && project.content.rendered ? parse(`${project.content.rendered}`) : ''}</div>
                             </div>
                         </div>
