@@ -19,17 +19,17 @@ const CustomBanner = () => {
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-3 text-white">
                     <div>
-                        <h3 className="text-xl font-bold">Từ ý tưởng đến thực tế – chúng tôi biến điều đó thành hiện thực!</h3>
-                        <p className="opacity-90">Liên hệ ngay để nhận tư vấn chi tiết - hoàn toàn miễn phí!</p>
+                        <h3 className="md:text-xl text-base font-bold">Từ ý tưởng đến thực tế – chúng tôi biến điều đó thành hiện thực!</h3>
+                        <p className="opacity-90 md:text-base text-sm">Liên hệ ngay để nhận tư vấn chi tiết - hoàn toàn miễn phí!</p>
                     </div>
                 </div>
                 <div className="flex gap-4">
                     <Link to={'mailto:ndqlinh@gmail.com'} className="flex items-center gap-2 text-white border border-white rounded-md px-3 py-1">
-                        <Mail className="h-4 w-4" />
+                        <Mail className="h-4 w-4 xl:block hidden" />
                         <span>Email: ndqlinh@gmail.com</span>
                     </Link>
                     <Link to={'https://zalo.me/0906260488'} className="flex items-center gap-2 bg-[#3f5f83] bg-opacity-80 hover:bg-opacity-100 text-white rounded-md px-3 py-1.5">
-                        <Phone className="h-4 w-4" />
+                        <Phone className="h-4 w-4 xl:block hidden" />
                         <span>Hotline: 0906.260.488</span>
                     </Link>
                 </div>

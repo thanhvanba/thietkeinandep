@@ -123,7 +123,7 @@ const Home = () => {
           </section >
 
           {/* logoKH */}
-          <div className='-mb-16'>
+          <div className='-mb-4'>
             <List_Client />
           </div>
           <div className='text-center'>

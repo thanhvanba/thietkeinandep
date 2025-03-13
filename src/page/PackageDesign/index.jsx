@@ -136,7 +136,7 @@ const PackageDesign = () => {
                 </div>
             </section>
 
-            <section className='bg-[#EDEDED] -mb-20'>
+            <section className='bg-[#EDEDED] -mb-4'>
                 <List_Client />
             </section>
             {/* <Footer /> */}

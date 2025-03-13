@@ -39,7 +39,7 @@ const Header = () => {
                 break;
             case "/san-xuat-in-an/in-nhanh":
             case "/san-xuat-in-an/in-offset":
-                case "/san-xuat-in-an/in-quang-cao":
+            case "/san-xuat-in-an/in-quang-cao":
                 setCurrentTab("5")
                 break;
         }
@@ -91,7 +91,7 @@ const Header = () => {
                             </div>
                             <ResponsiveMenu />
                             {/* Search bar */}
-                            <div className={`relative hidden md:block w-full md:w-1/3 my-4 md:my-0 `}>
+                            {/* <div className={`relative hidden md:block w-full md:w-1/3 my-4 md:my-0 `}>
                                 <input
                                     type="text"
                                     placeholder="Tìm kiếm sản phẩm mẫu thiết kế..."
@@ -102,11 +102,21 @@ const Header = () => {
                                 <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#26b6a5]">
                                     <Search size={20} />
                                 </button>
+                            </div> */}
+                            <div className='relative hidden md:block w-full md:w-3/5 my-4 md:my-0 font-robotoSlab'>
+                                <div className='text-lg'>
+                                    CTY TNHH TM DV GIẢI PHÁP HOME
+                                </div>
+                                <div className='text-sm font-light'>
+                                    52/3/1 Thạnh Xuân 38, P. Thạnh Xuân, Quận 12, Tp. HCM
+                                </div>
+                                <div className='text-sm font-light'>
+                                    Phone: 0906 260 488 (Zalo)
+                                </div>
                             </div>
-
                             {/* Phone, cart and login */}
                             <div className={`items-center hidden md:flex space-x-6`}>
-                                <Link href="/contact" className="flex items-center">
+                                <Link to="https://zalo.me/0906260488" rel="nofollow" target="_blank" className="flex items-center">
                                     <img className="h-12 w-12" src={phone} alt="" />
                                     <div className='pl-2'>
                                         <div className='text-amber-600 font-semibold text-lg'>0906.260.488</div>
@@ -114,7 +124,7 @@ const Header = () => {
                                     </div>
                                 </Link>
 
-                                <Link href="/cart" className="relative">
+                                <Link to="https://www.facebook.com/thietkehome" rel="nofollow" target="_blank" className="relative">
                                     <img className="h-12 w-12 text-neutral-300" src={fb} alt="" />
                                 </Link>
                             </div>
