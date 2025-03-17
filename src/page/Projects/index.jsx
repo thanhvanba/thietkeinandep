@@ -8,6 +8,7 @@ import Apiservice from '../../service/apiservice'
 import { Link } from 'react-router-dom'
 import Loader from '../../components/Loader'
 import ProjectComponent from '../../components/ProjectComponent'
+import ProjectComponent2 from '../../components/ProjectComponent2'
 const Projects = () => {
     const { projectApi, } = Apiservice()
 
@@ -71,7 +72,7 @@ const Projects = () => {
                         </div>
                     </section> */}
                     <div>
-                        <ProjectComponent products={projects} />
+                        <ProjectComponent2 products={projects} />
                     </div>
                     {/* <Footer /> */}
                 </>

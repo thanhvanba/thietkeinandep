@@ -28,7 +28,7 @@ const DetailProject = ({ visible, onClose, listProject, project, request, onSele
             style={{ top: 0, height: "100vh", maxWidth: "100%", margin: "0 auto" }}
             bodyStyle={{ height: "100%", overflow: "visible", display: "flex", flexDirection: "column" }} // Bỏ overflow: auto
         >
-            <div className="p-1 md:p-10 lg:p-14 w-full">
+            <div className="p-1 md:p-2 lg:p-3 w-full">
                 {/* <Header /> */}
                 {/* Banner */}
                 <div className='h-[full] w-full relative'>

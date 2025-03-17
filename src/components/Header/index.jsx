@@ -131,7 +131,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='bg-[#446083] flex justify-center items-center h-12'>
+                    <div className='hidden md:flex bg-[#446083] justify-center items-center h-12'>
                         <HeaderContent currentTab={currentTab} />
                     </div>
                 </animated.header >
