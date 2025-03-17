@@ -28,7 +28,8 @@ const DetailProject = ({ visible, onClose, listProject, project, request, onSele
             style={{ top: 0, height: "100vh", maxWidth: "100%", margin: "0 auto" }}
             bodyStyle={{ height: "100%", overflow: "visible", display: "flex", flexDirection: "column" }} // Bỏ overflow: auto
         >
-            <div className="p-1 md:p-2 lg:p-3 w-full">
+            {/* <div className="p-1 md:p-2 lg:p-3 w-full"> */}
+            <div className="w-full">
                 {/* <Header /> */}
                 {/* Banner */}
                 <div className='h-[full] w-full relative'>
@@ -46,10 +47,10 @@ const DetailProject = ({ visible, onClose, listProject, project, request, onSele
                         </div>
                     </div>
                 </div>
-                <section className='flex py-5'>
+                <section className='flex'>
                     <div className='relative w-full'>
                         <div className='max-w-7xl mx-auto'>
-                            <div className='px-[15px] pb-[30px]'>
+                            <div className='px-[15px] py-2'>
                                 {/* {
                                     project && <div className='font-roboto relative text-sm sm:text-base'>
                                         <div className='red-line' />
@@ -109,7 +110,7 @@ const DetailProject = ({ visible, onClose, listProject, project, request, onSele
                     </div>
                 </section>
                 {/* <Footer /> */}
-                <div className='bg-zinc-500/70 px-2 lg:px-8'>
+                <div className='bg-zinc-700/70 px-2 lg:px-8'>
                     <Carousel
                         arrows
                         infinite={false}

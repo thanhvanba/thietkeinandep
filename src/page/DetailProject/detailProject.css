@@ -1,6 +1,7 @@
 .custom-modal .ant-modal-content {
     background: rgba(0, 0, 0, 0.6) !important;
     box-shadow: none !important;
+    padding: 0 !important;
 }
 
 .custom-modal .ant-modal {
