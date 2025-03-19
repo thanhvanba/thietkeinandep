@@ -64,10 +64,10 @@ const ProjectComponent = ({ products }) => {
             />
 
             {/* Overlay hiển thị thông tin khi hover */}
-            <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {/* <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h3 className="text-base sm:text-lg lg:text-xl font-semibold">{product.acf.project_name}</h3>
               <p className="text-xs sm:text-sm lg:text-base">{product.acf.services}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
